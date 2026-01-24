@@ -43,7 +43,16 @@
 
     .wrap{max-width:1100px;margin:auto;padding:28px 18px 70px}
 
-    /* NAV */
+    /* ===== icon base + hover ===== */
+    .ico{
+      width:16px;height:16px;
+      display:inline-block;
+      vertical-align:middle;
+      transition: transform .18s ease, opacity .18s ease;
+      opacity:.92;
+    }
+
+    /* ===== NAV ===== */
     .nav{
       display:flex;justify-content:space-between;align-items:center;
       padding:14px 16px;
@@ -62,7 +71,6 @@
       letter-spacing:.2px;
     }
 
-    /* Logo en el header */
     .logo{
       width:28px;
       height:28px;
@@ -80,11 +88,27 @@
       box-shadow:0 0 20px rgba(0,224,184,.55);
     }
 
-    .links{display:flex;gap:16px;font-size:14px;color:var(--muted)}
-    .links a{position:relative}
+    .links{
+      display:flex;
+      gap:14px;
+      font-size:14px;
+      color:var(--muted);
+      align-items:center;
+    }
+
+    .links a{
+      position:relative;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      transition: background .2s ease, color .2s ease, transform .2s ease;
+    }
+
     .links a::after{
       content:"";
-      position:absolute; left:0; right:0; bottom:-6px;
+      position:absolute; left:12px; right:12px; bottom:4px;
       height:2px; border-radius:999px;
       background:var(--gradient);
       transform:scaleX(0);
@@ -92,7 +116,15 @@
       transition:transform .18s ease;
       opacity:.9;
     }
+
+    .links a:hover{
+      color:var(--text);
+      background: rgba(255,255,255,.05);
+      transform: translateY(-1px);
+    }
+
     .links a:hover::after{transform:scaleX(1)}
+    .links a:hover .ico{transform: translateY(-1px) scale(1.06); opacity:1}
 
     .btn{
       padding:10px 16px;
@@ -124,7 +156,7 @@
       color:var(--text);
     }
 
-    /* HERO */
+    /* ===== HERO ===== */
     .hero{padding:70px 0 30px}
 
     .kicker{
@@ -147,7 +179,7 @@
 
     .cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
 
-    /* GRID */
+    /* ===== GRID ===== */
     .grid{
       display:grid;
       grid-template-columns:repeat(12,1fr);
@@ -221,7 +253,7 @@
     .span-5{grid-column:span 5}
     .span-4{grid-column:span 4}
 
-    /* SECTIONS */
+    /* ===== SECTIONS ===== */
     .section{margin-top:44px}
     .section h2{margin:0 0 10px; font-size:20px}
     .section p{margin:0; color:var(--muted); line-height:1.6}
@@ -235,6 +267,24 @@
 
     .item{grid-column:span 6;padding:18px}
     .item p{margin:8px 0 0;color:var(--muted);line-height:1.6}
+
+    /* contacto con iconos */
+    .contactLinks{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-top:10px;
+    }
+    .contactLinks a{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:var(--text);
+      opacity:.92;
+      transition: transform .18s ease, opacity .18s ease;
+    }
+    .contactLinks a:hover{transform: translateY(-1px); opacity:1}
+    .contactLinks a:hover .ico{transform: translateY(-1px) scale(1.06); opacity:1}
 
     footer{
       margin-top:50px;
@@ -257,8 +307,12 @@
       box-shadow:var(--glow);
       z-index:999;
       transition: transform .2s ease, opacity .2s ease;
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
     .wa:hover{transform:translateY(-2px);opacity:.95}
+    .wa:hover .ico{transform: translateY(-1px) scale(1.06); opacity:1}
 
     /* ===== Scroll Animations ===== */
     .reveal{
@@ -364,7 +418,7 @@
 
     @media (prefers-reduced-motion: reduce){
       .reveal{opacity:1;transform:none;transition:none}
-      .btn,.card,.wa,.closeBtn{transition:none}
+      .btn,.card,.wa,.closeBtn,.ico{transition:none}
     }
   </style>
 </head>
@@ -374,15 +428,34 @@
 
 <header class="nav reveal">
   <div class="brand">
-    <!-- LOGO (usa PNG recomendado) -->
     <img class="logo" src="images/logo.png" alt="Logo Reyes Graphic" />
     <span class="brandText"><span class="dot"></span> Reyes Graphic</span>
   </div>
+
+  <!-- MENÚ con iconos -->
   <nav class="links">
-    <a href="#work">Trabajo</a>
-    <a href="#services">Servicios</a>
-    <a href="#contact">Contacto</a>
+    <a href="#work" aria-label="Trabajo">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M10 3h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v3H2V8a2 2 0 0 1 2-2h4V5a2 2 0 0 1 2-2zm4 3V5h-4v1h4zM2 13h20v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6z"/>
+      </svg>
+      Trabajo
+    </a>
+
+    <a href="#services" aria-label="Servicios">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M12 2 2 7l10 5 10-5-10-5zm0 7L2 4v3l10 5 10-5V4l-10 5zm0 4L2 8v3l10 5 10-5V8l-10 5z"/>
+      </svg>
+      Servicios
+    </a>
+
+    <a href="#contact" aria-label="Contacto">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+      Contacto
+    </a>
   </nav>
+
   <a class="btn" href="#contact">Hablemos</a>
 </header>
 
@@ -524,10 +597,24 @@
 
 <section class="section reveal" id="contact">
   <h2>Contacto</h2>
-  <p>
-    <a href="mailto:info@reyesgraphic.net">info@reyesgraphic.net</a><br>
-    <a href="https://instagram.com/reyesgraphic" target="_blank" rel="noopener">@reyesgraphic</a>
-  </p>
+
+  <div class="contactLinks">
+    <!-- correo -->
+    <a href="mailto:info@reyesgraphic.net">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+      info@reyesgraphic.net
+    </a>
+
+    <!-- instagram -->
+    <a href="https://instagram.com/reyesgraphic" target="_blank" rel="noopener">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3.5A5.5 5.5 0 1 0 17.5 12 5.51 5.51 0 0 0 12 7.5zm0 9A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 16.5zm5.75-9.75a1.25 1.25 0 1 0 1.25 1.25 1.25 1.25 0 0 0-1.25-1.25z"/>
+      </svg>
+      @reyesgraphic
+    </a>
+  </div>
 </section>
 
 <footer class="reveal">
@@ -536,8 +623,15 @@
 
 </div>
 
-<a class="wa" href="https://wa.me/18496536397" target="_blank" rel="noopener">WhatsApp</a>
+<!-- WhatsApp con icono -->
+<a class="wa" href="https://wa.me/18496536397" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg class="ico" viewBox="0 0 32 32" aria-hidden="true">
+    <path fill="currentColor" d="M16.003 3C9.383 3 4 8.383 4 15.003c0 2.646.863 5.096 2.33 7.084L5 29l7.1-1.864a11.94 11.94 0 0 0 3.903.65C22.617 27.786 28 22.403 28 15.003 28 8.383 22.617 3 16.003 3zm0 21.79a9.77 9.77 0 0 1-3.335-.587l-.238-.087-4.212 1.106 1.125-4.1-.155-.264a9.77 9.77 0 1 1 6.815 3.932zm5.357-7.36c-.293-.147-1.736-.857-2.006-.956-.27-.098-.467-.147-.664.148-.196.293-.762.956-.934 1.152-.172.197-.344.222-.637.074-.293-.147-1.238-.456-2.357-1.456-.87-.777-1.457-1.735-1.63-2.028-.172-.293-.018-.45.13-.597.132-.132.293-.344.44-.516.148-.172.197-.293.295-.49.098-.196.05-.37-.025-.517-.074-.147-.664-1.603-.91-2.195-.24-.576-.483-.498-.664-.507l-.566-.01c-.196 0-.517.074-.787.37-.27.293-1.033 1.01-1.033 2.468 0 1.457 1.058 2.865 1.205 3.063.148.196 2.083 3.18 5.047 4.458.705.304 1.255.486 1.684.622.707.225 1.35.193 1.857.117.566-.085 1.736-.71 1.982-1.395.246-.687.246-1.277.172-1.395-.074-.117-.27-.197-.566-.344z"/>
+  </svg>
+  WhatsApp
+</a>
 
+<!-- MODAL -->
 <div class="modal" id="modal" aria-hidden="true">
   <div class="backdrop" data-close="1"></div>
   <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle">
