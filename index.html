@@ -78,6 +78,11 @@
       background:rgba(255,255,255,.06);
       transition:transform .2s ease, opacity .2s ease, border-color .2s ease;
       font-size:14px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      cursor:pointer;
     }
     .btn:hover{transform:translateY(-1px); border-color:rgba(255,255,255,.20)}
 
@@ -89,6 +94,12 @@
       box-shadow:var(--glow);
     }
     .btn.primary:hover{opacity:.92}
+
+    .btn.ghost{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.14);
+      color:var(--text);
+    }
 
     /* HERO */
     .hero{padding:70px 0 30px}
@@ -150,7 +161,6 @@
       filter:saturate(1.05) contrast(1.05);
     }
 
-    /* Overlay para legibilidad */
     .tile::after{
       content:"";
       position:absolute; inset:0;
@@ -239,19 +249,139 @@
       opacity:1;
       transform: translateY(0);
     }
-
-    /* Stagger: usa variable --d para delays */
     .stagger .reveal{ transition-delay: var(--d, 0ms); }
+
+    /* ===== Modal ===== */
+    .modal{
+      position:fixed;
+      inset:0;
+      display:none;
+      z-index:1000;
+    }
+    .modal.open{display:block}
+    .backdrop{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,.65);
+      backdrop-filter: blur(8px);
+    }
+    .dialog{
+      position:relative;
+      width:min(960px, calc(100% - 28px));
+      margin: 70px auto;
+      border-radius: 22px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(11,18,27,.75);
+      overflow:hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,.55);
+    }
+    .dialogTop{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px 16px 0 16px;
+      align-items:flex-start;
+    }
+    .dialogTitle{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-.01em;
+    }
+    .dialogSub{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+      max-width:70ch;
+    }
+    .closeBtn{
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      border-radius:999px;
+      padding:8px 12px;
+      cursor:pointer;
+      transition: transform .15s ease, opacity .15s ease;
+      white-space:nowrap;
+    }
+    .closeBtn:hover{transform:translateY(-1px);opacity:.95}
+    .dialogMedia{
+      position:relative;
+      aspect-ratio: 16 / 9;
+      background: rgba(255,255,255,.05);
+      margin: 14px 16px 0 16px;
+      border-radius: 18px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .dialogMedia img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .dialogBody{
+      padding: 14px 16px 16px 16px;
+      display:grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap:14px;
+      align-items:start;
+    }
+    .bullets{
+      margin:0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+    .side{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      border-radius: 18px;
+      padding: 14px;
+    }
+    .sideTitle{
+      margin:0 0 10px 0;
+      font-size:14px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing:.12em;
+    }
+    .pillRow{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px}
+    .pill{
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .actions{display:flex; gap:10px; flex-wrap:wrap}
+
+    /* Hacer que las cards sean botones sin estilos raros */
+    .workCardBtn{
+      width:100%;
+      display:block;
+      cursor:pointer;
+      border:none;
+      padding:0;
+      background:transparent;
+      text-align:left;
+      color:inherit;
+    }
 
     @media(max-width:820px){
       .links{display:none}
       .span-7,.span-5,.span-4,.item{grid-column:1/-1}
       .hero{padding:54px 0 18px}
+      .dialogBody{grid-template-columns:1fr}
+      .dialog{margin: 50px auto}
     }
 
     @media (prefers-reduced-motion: reduce){
       .reveal{opacity:1;transform:none;transition:none}
-      .btn,.card,.wa{transition:none}
+      .btn,.card,.wa,.closeBtn{transition:none}
     }
   </style>
 </head>
@@ -281,11 +411,21 @@
     <a class="btn" href="#contact">Cotizar</a>
   </div>
 
-  <!-- PROYECTOS con TUS imágenes -->
+  <!-- PROYECTOS (clic abre modal) -->
   <div class="grid stagger" id="work">
 
-    <!-- proyecto1: web -->
-    <a class="card tile span-7 reveal" style="--d:0ms" href="#">
+    <!-- 1: Web -->
+    <button
+      class="workCardBtn card tile span-7 reveal"
+      style="--d:0ms"
+      data-title="Proyecto 01 — Web para cliente"
+      data-sub="Diseño y desarrollo de página web"
+      data-img="images/proyecto1.jpg"
+      data-tags="Web,UI/UX,Responsive"
+      data-points="Diseño moderno y limpio|Optimizada para móvil (responsive)|Enfoque en conversión (CTA claros)|Estructura rápida y elegante"
+      data-link="https://www.reyesgraphic.net/"
+      data-linktext="Ver referencia"
+    >
       <img src="images/proyecto1.jpg" alt="Sitio web realizado para un cliente" loading="lazy" />
       <div class="meta">
         <div>
@@ -294,10 +434,20 @@
         </div>
         <span class="chip">Web</span>
       </div>
-    </a>
+    </button>
 
-    <!-- proyecto2: instagram -->
-    <a class="card tile span-5 reveal" style="--d:80ms" href="#">
+    <!-- 2: Instagram -->
+    <button
+      class="workCardBtn card tile span-5 reveal"
+      style="--d:80ms"
+      data-title="Proyecto 02 — Instagram"
+      data-sub="Gestión de contenido y diseño visual"
+      data-img="images/proyecto2.jpg"
+      data-tags="Social,Contenido,Branding"
+      data-points="Diseño de línea gráfica consistente|Programación de contenido|Optimización visual del feed|Piezas para anuncios y stories"
+      data-link="https://instagram.com/reyesgraphic"
+      data-linktext="Ver Instagram"
+    >
       <img src="images/proyecto2.jpg" alt="Cuenta de Instagram gestionada por Reyes Graphic" loading="lazy" />
       <div class="meta">
         <div>
@@ -306,10 +456,20 @@
         </div>
         <span class="chip">Social</span>
       </div>
-    </a>
+    </button>
 
-    <!-- proyecto3: logo -->
-    <a class="card tile span-4 reveal" style="--d:160ms" href="#">
+    <!-- 3: Logo -->
+    <button
+      class="workCardBtn card tile span-4 reveal"
+      style="--d:160ms"
+      data-title="Proyecto 03 — Logo"
+      data-sub="Identidad visual para cliente"
+      data-img="images/proyecto3.jpg"
+      data-tags="Branding,Logo,Identidad"
+      data-points="Concepto basado en la marca|Variantes (color/monocromo)|Entrega lista para redes|Aplicación simple y moderna"
+      data-link=""
+      data-linktext=""
+    >
       <img src="images/proyecto3.jpg" alt="Logo diseñado para cliente" loading="lazy" />
       <div class="meta">
         <div>
@@ -318,10 +478,20 @@
         </div>
         <span class="chip">Branding</span>
       </div>
-    </a>
+    </button>
 
-    <!-- proyecto4: logo -->
-    <a class="card tile span-4 reveal" style="--d:240ms" href="#">
+    <!-- 4: Logo -->
+    <button
+      class="workCardBtn card tile span-4 reveal"
+      style="--d:240ms"
+      data-title="Proyecto 04 — Logo"
+      data-sub="Diseño de marca y concepto"
+      data-img="images/proyecto4.jpg"
+      data-tags="Branding,Logo,Concepto"
+      data-points="Diseño limpio y memorable|Buena legibilidad|Versión para impresión|Archivos listos para uso"
+      data-link=""
+      data-linktext=""
+    >
       <img src="images/proyecto4.jpg" alt="Logo diseñado para cliente" loading="lazy" />
       <div class="meta">
         <div>
@@ -330,10 +500,20 @@
         </div>
         <span class="chip">Branding</span>
       </div>
-    </a>
+    </button>
 
-    <!-- proyecto5: logo -->
-    <a class="card tile span-4 reveal" style="--d:320ms" href="#">
+    <!-- 5: Logo -->
+    <button
+      class="workCardBtn card tile span-4 reveal"
+      style="--d:320ms"
+      data-title="Proyecto 05 — Logo"
+      data-sub="Logo limpio y moderno"
+      data-img="images/proyecto5.jpg"
+      data-tags="Branding,Logo,Minimal"
+      data-points="Minimal y profesional|Escalable (funciona en pequeño)|Versión para fondo oscuro/claro|Identidad coherente"
+      data-link=""
+      data-linktext=""
+    >
       <img src="images/proyecto5.jpg" alt="Logo diseñado para cliente" loading="lazy" />
       <div class="meta">
         <div>
@@ -342,7 +522,7 @@
         </div>
         <span class="chip">Branding</span>
       </div>
-    </a>
+    </button>
 
   </div>
 </section>
@@ -390,6 +570,37 @@
 
 <a class="wa" href="https://wa.me/18496536397" target="_blank" rel="noopener">WhatsApp</a>
 
+<!-- MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="backdrop" data-close="1"></div>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="dialogTop">
+      <div>
+        <h3 class="dialogTitle" id="mTitle">Proyecto</h3>
+        <p class="dialogSub" id="mSub">Detalles del proyecto</p>
+      </div>
+      <button class="closeBtn" id="mClose" aria-label="Cerrar">Cerrar ✕</button>
+    </div>
+
+    <div class="dialogMedia">
+      <img id="mImg" src="" alt="Vista del proyecto" />
+    </div>
+
+    <div class="dialogBody">
+      <div>
+        <ul class="bullets" id="mBullets"></ul>
+      </div>
+      <div class="side">
+        <div class="sideTitle">Tags</div>
+        <div class="pillRow" id="mTags"></div>
+
+        <div class="sideTitle" style="margin-top:14px">Acciones</div>
+        <div class="actions" id="mActions"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
   // Año
   document.getElementById("y").textContent = new Date().getFullYear();
@@ -400,12 +611,113 @@
     entries.forEach((e) => {
       if (e.isIntersecting) {
         e.target.classList.add("in");
-        io.unobserve(e.target); // anima una vez
+        io.unobserve(e.target);
       }
     });
   }, { threshold: 0.12 });
-
   items.forEach(el => io.observe(el));
+
+  // ===== Modal logic =====
+  const modal = document.getElementById("modal");
+  const mTitle = document.getElementById("mTitle");
+  const mSub = document.getElementById("mSub");
+  const mImg = document.getElementById("mImg");
+  const mBullets = document.getElementById("mBullets");
+  const mTags = document.getElementById("mTags");
+  const mActions = document.getElementById("mActions");
+  const mClose = document.getElementById("mClose");
+
+  let lastFocused = null;
+
+  function openModal(data){
+    lastFocused = document.activeElement;
+
+    mTitle.textContent = data.title || "Proyecto";
+    mSub.textContent = data.sub || "";
+    mImg.src = data.img || "";
+    mImg.alt = data.title || "Vista del proyecto";
+
+    // bullets
+    mBullets.innerHTML = "";
+    (data.points || []).forEach(p => {
+      const li = document.createElement("li");
+      li.textContent = p;
+      mBullets.appendChild(li);
+    });
+
+    // tags
+    mTags.innerHTML = "";
+    (data.tags || []).forEach(t => {
+      const span = document.createElement("span");
+      span.className = "pill";
+      span.textContent = t;
+      mTags.appendChild(span);
+    });
+
+    // actions
+    mActions.innerHTML = "";
+
+    // botón whatsapp
+    const wa = document.createElement("a");
+    wa.className = "btn primary";
+    wa.href = "https://wa.me/18496536397";
+    wa.target = "_blank";
+    wa.rel = "noopener";
+    wa.textContent = "Cotizar por WhatsApp";
+    mActions.appendChild(wa);
+
+    // botón ver link si existe
+    if (data.link){
+      const a = document.createElement("a");
+      a.className = "btn ghost";
+      a.href = data.link;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = data.linktext || "Ver";
+      mActions.appendChild(a);
+    }
+
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    mClose.focus();
+  }
+
+  function closeModal(){
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    if (lastFocused) lastFocused.focus();
+  }
+
+  // Abrir modal al click en cards
+  document.querySelectorAll(".workCardBtn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const points = (btn.dataset.points || "").split("|").filter(Boolean);
+      const tags = (btn.dataset.tags || "").split(",").map(s => s.trim()).filter(Boolean);
+
+      openModal({
+        title: btn.dataset.title,
+        sub: btn.dataset.sub,
+        img: btn.dataset.img,
+        points,
+        tags,
+        link: btn.dataset.link,
+        linktext: btn.dataset.linktext
+      });
+    });
+  });
+
+  // cerrar por botón y backdrop
+  mClose.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    if (e.target && e.target.dataset && e.target.dataset.close) closeModal();
+  });
+
+  // cerrar con ESC
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+  });
 </script>
 
 </body>
