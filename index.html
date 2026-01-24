@@ -1,1 +1,254 @@
-<!doctype html> <html lang="es"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>Reyes Graphic — Diseño & Marketing</title> <style> :root{ --bg:#0b0c10; --card:#11131a; --text:#f5f5f5; --muted:#b7bcc8; --line:rgba(255,255,255,.10); --accent:#ffffff; --radius:18px; } *{box-sizing:border-box} body{ margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif; background: radial-gradient(1000px 600px at 70% 0%, rgba(255,255,255,.08), transparent 55%), radial-gradient(900px 500px at 10% 30%, rgba(255,255,255,.06), transparent 50%), var(--bg); color:var(--text); } a{color:inherit; text-decoration:none} .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 70px} .nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 16px; border:1px solid var(--line); border-radius:999px; backdrop-filter: blur(10px); background: rgba(17,19,26,.55); position: sticky; top: 14px; z-index: 10; } .brand{display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.3px} .dot{width:10px; height:10px; border-radius:999px; background:var(--accent); opacity:.9} .links{display:flex; gap:14px; font-size:14px; color:var(--muted)} .btn{ padding:10px 14px; border-radius:999px; border:1px solid var(--line); background: rgba(255,255,255,.06); font-size:14px; } .hero{padding:70px 0 30px} .kicker{color:var(--muted); font-size:14px; letter-spacing:.12em; text-transform:uppercase} h1{ margin:12px 0 14px; font-size: clamp(38px, 6vw, 64px); line-height:1.02; letter-spacing:-.02em; } .sub{ max-width:60ch; color:var(--muted); font-size:16px; line-height:1.6; } .cta{display:flex; gap:12px; margin-top:22px; flex-wrap:wrap} .btn.primary{ border-color: rgba(255,255,255,.22); background: rgba(255,255,255,.12); } .grid{ display:grid; grid-template-columns:repeat(12, 1fr); gap:14px; margin-top:26px; } .card{ border:1px solid var(--line); background: rgba(17,19,26,.55); border-radius: var(--radius); overflow:hidden; backdrop-filter: blur(10px); } .card.pad{padding:18px} .tile{min-height:260px; position:relative} .tile::before{ content:""; position:absolute; inset:0; background: radial-gradient(600px 260px at 30% 20%, rgba(255,255,255,.14), transparent 55%), linear-gradient(180deg, rgba(255,255,255,.05), transparent); opacity:.95; } .tile .meta{ position:absolute; left:16px; right:16px; bottom:16px; display:flex; justify-content:space-between; align-items:flex-end; gap:12px; } .meta h3{margin:0; font-size:16px} .meta p{margin:6px 0 0; color:var(--muted); font-size:13px} .chip{ border:1px solid var(--line); padding:8px 10px; border-radius:999px; font-size:12px; color:var(--muted); background: rgba(255,255,255,.06); white-space:nowrap; } .span-7{grid-column: span 7} .span-5{grid-column: span 5} .span-4{grid-column: span 4} .span-6{grid-column: span 6} .section{margin-top:34px} .section h2{margin:0 0 10px; font-size:20px} .section p{margin:0; color:var(--muted); line-height:1.6} .list{display:grid; grid-template-columns:repeat(12,1fr); gap:14px; margin-top:14px} .item{grid-column: span 6} .foot{margin-top:42px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px} @media (max-width: 820px){ .links{display:none} .span-7,.span-5,.span-6,.span-4,.item{grid-column: 1 / -1} .hero{padding:54px 0 18px} } </style> </head> <body> <div class="wrap"> <header class="nav"> <div class="brand"><span class="dot"></span> Reyes Graphic</div> <nav class="links"> <a href="#work">Trabajo</a> <a href="#services">Servicios</a> <a href="#about">Sobre mí</a> <a href="#contact">Contacto</a> </nav> <a class="btn" href="#contact">Hablemos</a> </header> <section class="hero"> <div class="kicker">Diseño & Branding</div> <h1>Diseño que se ve pro y vende: redes, branding y web para tu negocio.</h1> <p class="sub"> Creo diseños modernos para Instagram, identidad visual y páginas web rápidas que convierten visitas en clientes. </p> <div class="cta"> <a class="btn primary" href="#work">Ver trabajos</a> <a class="btn" href="#contact">Cotizar</a> </div> <div class="grid" id="work"> <a class="card tile span-7" href="#"> <div class="meta"> <div> <h3>Proyecto 01 — Identidad Visual</h3> <p>Logo + sistema + piezas para redes</p> </div> <span class="chip">Branding</span> </div> </a> <a class="card tile span-5" href="#"> <div class="meta"> <div> <h3>Proyecto 02 — Web</h3> <p>Landing rápida y elegante</p> </div> <span class="chip">Web</span> </div> </a> <a class="card tile span-4" href="#"> <div class="meta"> <div> <h3>Proyecto 03</h3> <p>Posts & anuncios</p> </div> <span class="chip">Social</span> </div> </a> <a class="card tile span-4" href="#"> <div class="meta"> <div> <h3>Proyecto 04</h3> <p>Packaging</p> </div> <span class="chip">Print</span> </div> </a> <a class="card tile span-4" href="#"> <div class="meta"> <div> <h3>Proyecto 05</h3> <p>Fotografía/edición</p> </div> <span class="chip">Creative</span> </div> </a> </div> </section> <section class="section" id="services"> <h2>Servicios</h2> <p>Branding, diseño para redes, páginas web, y contenido que convierte.</p> <div class="list"> <div class="card pad item"> <strong>Branding</strong> <p>Logo, paleta, tipografías, guías y piezas clave.</p> </div> <div class="card pad item"> <strong>Web</strong> <p>Landing/portafolio rápido, responsive y moderno.</p> </div> <div class="card pad item"> <strong>Social Media</strong> <p>Diseño de posts, carruseles y anuncios.</p> </div> <div class="card pad item"> <strong>Contenido</strong> <p>Dirección creativa + mood + plantillas.</p> </div> </div> </section> <section class="section" id="about"> <h2>Sobre mí</h2> <p> Aquí tú pones tu historia: quién eres, qué haces, y por qué tu trabajo se siente diferente. </p> </section> <section class="section" id="contact"> <h2>Contacto</h2> <p>Escríbeme y armamos algo bacano para tu marca.</p> <div class="list"> <div class="card pad item"> <strong>Email</strong> <p>info@reyesgraphic.net</p> </div> <div class="card pad item"> <strong>Instagram</strong> <p>@REYESGRAPHIC</p> </div> </div> </section> <footer class="foot"> © <span id="y"></span> Reyes Graphic — Hecho con amor. </footer> </div> <script> document.getElementById("y").textContent = new Date().getFullYear(); </script> </body> </html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reyes Graphic — Diseño & Marketing</title>
+
+  <style>
+    :root{
+      --bg:#070b10;
+      --card:#0b121b;
+      --text:#f5f7fb;
+      --muted:#a7b0bf;
+      --line:rgba(255,255,255,.12);
+      --radius:18px;
+
+      --blue:#1e90ff;
+      --green:#00e0b8;
+      --gradient: linear-gradient(135deg, var(--blue), var(--green));
+      --glow: 0 18px 55px rgba(0,224,184,.25);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 500px at 75% -5%, rgba(30,144,255,.18), transparent 55%),
+        radial-gradient(900px 500px at 15% 25%, rgba(0,224,184,.16), transparent 55%),
+        var(--bg);
+      color:var(--text);
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    .wrap{max-width:1100px;margin:auto;padding:28px 18px 70px}
+
+    /* NAV */
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 16px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      backdrop-filter:blur(12px);
+      background:rgba(10,16,24,.55);
+      position:sticky;top:14px;z-index:10;
+    }
+
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:var(--gradient);
+      box-shadow:0 0 20px rgba(0,224,184,.6);
+    }
+
+    .links{display:flex;gap:16px;font-size:14px;color:var(--muted)}
+
+    .btn{
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      transition:.2s;
+    }
+
+    .btn:hover{transform:translateY(-1px)}
+
+    .btn.primary{
+      background:var(--gradient);
+      color:#041014;
+      font-weight:700;
+      border:none;
+      box-shadow:var(--glow);
+    }
+
+    /* HERO */
+    .hero{padding:70px 0 30px}
+
+    .kicker{
+      text-transform:uppercase;
+      font-size:13px;
+      letter-spacing:.15em;
+      color:var(--muted);
+    }
+
+    h1{
+      font-size:clamp(38px,6vw,64px);
+      margin:12px 0;
+      line-height:1.05;
+      background:var(--gradient);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .sub{max-width:60ch;color:var(--muted);line-height:1.6}
+
+    .cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+      margin-top:32px;
+    }
+
+    .card{
+      background:rgba(11,18,27,.65);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      backdrop-filter:blur(12px);
+      transition:.2s;
+    }
+
+    .card:hover{transform:translateY(-3px)}
+
+    .tile{min-height:260px;position:relative}
+
+    .tile::before{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        radial-gradient(600px 260px at 30% 20%, rgba(30,144,255,.22), transparent 55%),
+        radial-gradient(600px 260px at 80% 20%, rgba(0,224,184,.18), transparent 55%);
+    }
+
+    .meta{
+      position:absolute;left:16px;right:16px;bottom:16px;
+      display:flex;justify-content:space-between;align-items:end;
+    }
+
+    .chip{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      font-size:12px;
+      color:var(--muted);
+      background:rgba(255,255,255,.05);
+    }
+
+    .span-7{grid-column:span 7}
+    .span-5{grid-column:span 5}
+    .span-4{grid-column:span 4}
+    .span-6{grid-column:span 6}
+
+    /* SECTIONS */
+    .section{margin-top:40px}
+    .section h2{margin-bottom:10px}
+    .section p{color:var(--muted)}
+
+    .list{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .item{grid-column:span 6;padding:18px}
+
+    footer{
+      margin-top:50px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media(max-width:820px){
+      .links{display:none}
+      .span-7,.span-5,.span-6,.span-4,.item{grid-column:1/-1}
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+<header class="nav">
+  <div class="brand"><span class="dot"></span> Reyes Graphic</div>
+  <nav class="links">
+    <a href="#work">Trabajo</a>
+    <a href="#services">Servicios</a>
+    <a href="#about">Sobre mí</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+  <a class="btn" href="#contact">Hablemos</a>
+</header>
+
+<section class="hero">
+  <div class="kicker">Diseño & Branding</div>
+  <h1>Diseño que se ve pro y vende</h1>
+  <p class="sub">
+    Branding, diseño para redes y páginas web modernas que convierten visitas en clientes.
+  </p>
+
+  <div class="cta">
+    <a class="btn primary" href="#work">Ver trabajos</a>
+    <a class="btn" href="#contact">Cotizar</a>
+  </div>
+
+  <div class="grid" id="work">
+    <div class="card tile span-7">
+      <div class="meta">
+        <div>
+          <strong>Identidad Visual</strong>
+          <p class="sub">Logo + branding</p>
+        </div>
+        <span class="chip">Branding</span>
+      </div>
+    </div>
+
+    <div class="card tile span-5">
+      <div class="meta">
+        <div>
+          <strong>Página Web</strong>
+          <p class="sub">Diseño moderno</p>
+        </div>
+        <span class="chip">Web</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <h2>Servicios</h2>
+  <div class="list">
+    <div class="card item"><strong>Branding</strong><p>Identidad visual completa</p></div>
+    <div class="card item"><strong>Diseño Web</strong><p>Landing y portafolios</p></div>
+    <div class="card item"><strong>Redes Sociales</strong><p>Posts y anuncios</p></div>
+    <div class="card item"><strong>Marketing</strong><p>Estrategia digital</p></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contacto</h2>
+  <p>info@reyesgraphic.net<br>@reyesgraphic</p>
+</section>
+
+<footer>
+  © <span id="y"></span> Reyes Graphic — Hecho con amor.
+</footer>
+
+</div>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
