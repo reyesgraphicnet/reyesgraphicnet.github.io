@@ -149,6 +149,27 @@
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
     }
+
+    /* ===== GANCHO (HERO TITLE) ===== */
+    .hero-title{
+      font-size:clamp(38px,6vw,64px);
+      margin:12px 0 14px;
+      line-height:1.05;
+      font-weight:800;
+
+      /* Quitamos el degradado del h1 general para que se vea limpio + con highlight */
+      background:none;
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: initial;
+      color: var(--text);
+      letter-spacing:-.01em;
+    }
+    .hero-title .highlight{
+      color: var(--green);
+      font-weight:900;
+      text-shadow: 0 0 28px rgba(0,224,184,.22);
+    }
+
     .sub{max-width:60ch;color:var(--muted);line-height:1.6; font-size:16px}
     .cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
 
@@ -379,6 +400,7 @@
       .dialogBody{grid-template-columns:1fr}
       .dialog{margin: 50px auto}
       .logo{width:26px;height:26px}
+      .hero-title{ text-align:center; }
     }
     @media (prefers-reduced-motion: reduce){
       .reveal{opacity:1;transform:none;transition:none}
@@ -446,10 +468,15 @@
       <a class="btn" href="#contact">Hablemos</a>
     </header>
 
-    <!-- (RESTO DEL CÓDIGO IGUAL, NO LO TOQUÉ) -->
     <section class="hero">
       <div class="kicker reveal">Diseño & Branding</div>
-      <h1 class="reveal">Diseño Que Se Ve Pro Y Vende</h1>
+
+      <!-- ✅ GANCHO NUEVO -->
+      <h1 class="hero-title reveal">
+        No vendemos diseños… <br>
+        <span class="highlight">creamos marcas que venden por ti 24/7.</span>
+      </h1>
+
       <p class="sub reveal">
         Branding, Diseño Para Redes Y Páginas Web Modernas Que Convierten Visitas En Clientes.
       </p>
