@@ -131,6 +131,7 @@
     .meta{
       position:absolute;left:16px;right:16px;bottom:16px;
       display:flex;justify-content:space-between;align-items:end;
+      gap:12px;
     }
 
     .chip{
@@ -169,6 +170,20 @@
       font-size:13px;
     }
 
+    /* WhatsApp */
+    .wa{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      padding:14px 16px;
+      border-radius:999px;
+      background:var(--gradient);
+      color:#041014;
+      font-weight:800;
+      box-shadow:var(--glow);
+      z-index:999;
+    }
+
     @media(max-width:820px){
       .links{display:none}
       .span-7,.span-5,.span-6,.span-4,.item{grid-column:1/-1}
@@ -184,7 +199,6 @@
   <nav class="links">
     <a href="#work">Trabajo</a>
     <a href="#services">Servicios</a>
-    <a href="#about">Sobre mí</a>
     <a href="#contact">Contacto</a>
   </nav>
   <a class="btn" href="#contact">Hablemos</a>
@@ -206,7 +220,7 @@
     <div class="card tile span-7">
       <div class="meta">
         <div>
-          <strong>Identidad Visual</strong>
+          <strong>Proyecto 01 — Identidad Visual</strong>
           <p class="sub">Logo + branding</p>
         </div>
         <span class="chip">Branding</span>
@@ -216,10 +230,40 @@
     <div class="card tile span-5">
       <div class="meta">
         <div>
-          <strong>Página Web</strong>
-          <p class="sub">Diseño moderno</p>
+          <strong>Proyecto 02 — Web</strong>
+          <p class="sub">Landing moderna</p>
         </div>
         <span class="chip">Web</span>
+      </div>
+    </div>
+
+    <div class="card tile span-4">
+      <div class="meta">
+        <div>
+          <strong>Proyecto 03</strong>
+          <p class="sub">Diseño de posts</p>
+        </div>
+        <span class="chip">Social</span>
+      </div>
+    </div>
+
+    <div class="card tile span-4">
+      <div class="meta">
+        <div>
+          <strong>Proyecto 04</strong>
+          <p class="sub">Packaging</p>
+        </div>
+        <span class="chip">Print</span>
+      </div>
+    </div>
+
+    <div class="card tile span-4">
+      <div class="meta">
+        <div>
+          <strong>Proyecto 05</strong>
+          <p class="sub">Fotografía / Edición</p>
+        </div>
+        <span class="chip">Creative</span>
       </div>
     </div>
   </div>
@@ -230,14 +274,17 @@
   <div class="list">
     <div class="card item"><strong>Branding</strong><p>Identidad visual completa</p></div>
     <div class="card item"><strong>Diseño Web</strong><p>Landing y portafolios</p></div>
-    <div class="card item"><strong>Redes Sociales</strong><p>Posts y anuncios</p></div>
+    <div class="card item"><strong>Redes Sociales</strong><p>Contenido visual</p></div>
     <div class="card item"><strong>Marketing</strong><p>Estrategia digital</p></div>
   </div>
 </section>
 
 <section class="section" id="contact">
   <h2>Contacto</h2>
-  <p>info@reyesgraphic.net<br>@reyesgraphic</p>
+  <p>
+    <a href="mailto:info@reyesgraphic.net">info@reyesgraphic.net</a><br>
+    <a href="https://instagram.com/reyesgraphic" target="_blank">@reyesgraphic</a>
+  </p>
 </section>
 
 <footer>
@@ -245,6 +292,8 @@
 </footer>
 
 </div>
+
+<a class="wa" href="https://wa.me/18496536397" target="_blank">WhatsApp</a>
 
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
