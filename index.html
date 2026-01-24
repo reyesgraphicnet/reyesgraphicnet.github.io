@@ -3,6 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- FAVICON (miniatura en la pestaña del navegador) -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
   <title>Reyes Graphic — Diseño & Marketing</title>
 
   <style>
@@ -49,7 +54,25 @@
       position:sticky;top:14px;z-index:10;
     }
 
-    .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.2px}
+    .brand{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+
+    /* Logo en el header */
+    .logo{
+      width:28px;
+      height:28px;
+      border-radius:8px;
+      object-fit:contain;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+
+    .brandText{display:flex; align-items:center; gap:10px}
 
     .dot{
       width:10px;height:10px;border-radius:50%;
@@ -143,7 +166,6 @@
     }
     .card:hover{transform:translateY(-3px); border-color: rgba(255,255,255,.20)}
 
-    /* Proyecto con imagen */
     .tile{
       min-height:260px;
       position:relative;
@@ -252,19 +274,9 @@
     .stagger .reveal{ transition-delay: var(--d, 0ms); }
 
     /* ===== Modal ===== */
-    .modal{
-      position:fixed;
-      inset:0;
-      display:none;
-      z-index:1000;
-    }
+    .modal{position:fixed;inset:0;display:none;z-index:1000}
     .modal.open{display:block}
-    .backdrop{
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,.65);
-      backdrop-filter: blur(8px);
-    }
+    .backdrop{position:absolute;inset:0;background:rgba(0,0,0,.65);backdrop-filter: blur(8px)}
     .dialog{
       position:relative;
       width:min(960px, calc(100% - 28px));
@@ -275,25 +287,9 @@
       overflow:hidden;
       box-shadow: 0 24px 80px rgba(0,0,0,.55);
     }
-    .dialogTop{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      padding:16px 16px 0 16px;
-      align-items:flex-start;
-    }
-    .dialogTitle{
-      margin:0;
-      font-size:18px;
-      letter-spacing:-.01em;
-    }
-    .dialogSub{
-      margin:6px 0 0;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.5;
-      max-width:70ch;
-    }
+    .dialogTop{display:flex;justify-content:space-between;gap:12px;padding:16px 16px 0 16px;align-items:flex-start}
+    .dialogTitle{margin:0;font-size:18px;letter-spacing:-.01em}
+    .dialogSub{margin:6px 0 0;color:var(--muted);font-size:14px;line-height:1.5;max-width:70ch}
     .closeBtn{
       border:1px solid rgba(255,255,255,.16);
       background:rgba(255,255,255,.06);
@@ -314,12 +310,7 @@
       overflow:hidden;
       border:1px solid rgba(255,255,255,.10);
     }
-    .dialogMedia img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
+    .dialogMedia img{width:100%;height:100%;object-fit:cover;display:block}
     .dialogBody{
       padding: 14px 16px 16px 16px;
       display:grid;
@@ -327,13 +318,7 @@
       gap:14px;
       align-items:start;
     }
-    .bullets{
-      margin:0;
-      padding-left: 18px;
-      color: var(--muted);
-      line-height:1.7;
-      font-size:14px;
-    }
+    .bullets{margin:0;padding-left: 18px;color: var(--muted);line-height:1.7;font-size:14px}
     .side{
       border:1px solid rgba(255,255,255,.10);
       background: rgba(255,255,255,.04);
@@ -347,19 +332,16 @@
       text-transform: uppercase;
       letter-spacing:.12em;
     }
-    .pillRow{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px}
+    .pillRow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
     .pill{
-      font-size:12px;
-      padding:7px 10px;
-      border-radius:999px;
+      font-size:12px;padding:7px 10px;border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
       background: rgba(255,255,255,.06);
       color: var(--muted);
       white-space: nowrap;
     }
-    .actions{display:flex; gap:10px; flex-wrap:wrap}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
 
-    /* Hacer que las cards sean botones sin estilos raros */
     .workCardBtn{
       width:100%;
       display:block;
@@ -377,6 +359,7 @@
       .hero{padding:54px 0 18px}
       .dialogBody{grid-template-columns:1fr}
       .dialog{margin: 50px auto}
+      .logo{width:26px;height:26px}
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -390,7 +373,11 @@
 <div class="wrap">
 
 <header class="nav reveal">
-  <div class="brand"><span class="dot"></span> Reyes Graphic</div>
+  <div class="brand">
+    <!-- LOGO (usa PNG recomendado) -->
+    <img class="logo" src="images/logo.png" alt="Logo Reyes Graphic" />
+    <span class="brandText"><span class="dot"></span> Reyes Graphic</span>
+  </div>
   <nav class="links">
     <a href="#work">Trabajo</a>
     <a href="#services">Servicios</a>
@@ -401,124 +388,108 @@
 
 <section class="hero">
   <div class="kicker reveal">Diseño & Branding</div>
-  <h1 class="reveal">Diseño que se ve pro y vende</h1>
+  <h1 class="reveal">Diseño Que Se Ve Pro Y Vende</h1>
   <p class="sub reveal">
-    Branding, diseño para redes y páginas web modernas que convierten visitas en clientes.
+    Branding, Diseño Para Redes Y Páginas Web Modernas Que Convierten Visitas En Clientes.
   </p>
 
   <div class="cta reveal">
-    <a class="btn primary" href="#work">Ver trabajos</a>
+    <a class="btn primary" href="#work">Ver Trabajos</a>
     <a class="btn" href="#contact">Cotizar</a>
   </div>
 
-  <!-- PROYECTOS (clic abre modal) -->
   <div class="grid stagger" id="work">
 
-    <!-- 1: Web -->
-    <button
-      class="workCardBtn card tile span-7 reveal"
-      style="--d:0ms"
-      data-title="Proyecto 01 — Web para cliente"
-      data-sub="Diseño y desarrollo de página web"
+    <button class="workCardBtn card tile span-7 reveal" style="--d:0ms"
+      data-title="Proyecto 01 — Web Para Cliente"
+      data-sub="Diseño Y Desarrollo De Página Web"
       data-img="images/proyecto1.jpg"
       data-tags="Web,UI/UX,Responsive"
-      data-points="Diseño moderno y limpio|Optimizada para móvil (responsive)|Enfoque en conversión (CTA claros)|Estructura rápida y elegante"
+      data-points="Diseño Moderno Y Limpio|Optimizada Para Móvil (Responsive)|Enfoque En Conversión (CTA Claros)|Estructura Rápida Y Elegante"
       data-link="https://www.reyesgraphic.net/"
-      data-linktext="Ver referencia"
+      data-linktext="Ver Referencia"
     >
-      <img src="images/proyecto1.jpg" alt="Sitio web realizado para un cliente" loading="lazy" />
+      <img src="images/proyecto1.jpg" alt="Sitio Web Realizado Para Un Cliente" loading="lazy" />
       <div class="meta">
         <div>
-          <strong>Proyecto 01 — Web para cliente</strong>
-          <p class="mini">Diseño y desarrollo de página web</p>
+          <strong>Proyecto 01 — Web Para Cliente</strong>
+          <p class="mini">Diseño Y Desarrollo De Página Web</p>
         </div>
         <span class="chip">Web</span>
       </div>
     </button>
 
-    <!-- 2: Instagram -->
-    <button
-      class="workCardBtn card tile span-5 reveal"
-      style="--d:80ms"
+    <button class="workCardBtn card tile span-5 reveal" style="--d:80ms"
       data-title="Proyecto 02 — Instagram"
-      data-sub="Gestión de contenido y diseño visual"
+      data-sub="Gestión De Contenido Y Diseño Visual"
       data-img="images/proyecto2.jpg"
       data-tags="Social,Contenido,Branding"
-      data-points="Diseño de línea gráfica consistente|Programación de contenido|Optimización visual del feed|Piezas para anuncios y stories"
+      data-points="Diseño De Línea Gráfica Consistente|Programación De Contenido|Optimización Visual Del Feed|Piezas Para Anuncios Y Stories"
       data-link="https://instagram.com/reyesgraphic"
       data-linktext="Ver Instagram"
     >
-      <img src="images/proyecto2.jpg" alt="Cuenta de Instagram gestionada por Reyes Graphic" loading="lazy" />
+      <img src="images/proyecto2.jpg" alt="Cuenta De Instagram Gestionada Por Reyes Graphic" loading="lazy" />
       <div class="meta">
         <div>
           <strong>Proyecto 02 — Instagram</strong>
-          <p class="mini">Gestión de contenido y diseño visual</p>
+          <p class="mini">Gestión De Contenido Y Diseño Visual</p>
         </div>
         <span class="chip">Social</span>
       </div>
     </button>
 
-    <!-- 3: Logo -->
-    <button
-      class="workCardBtn card tile span-4 reveal"
-      style="--d:160ms"
+    <button class="workCardBtn card tile span-4 reveal" style="--d:160ms"
       data-title="Proyecto 03 — Logo"
-      data-sub="Identidad visual para cliente"
+      data-sub="Identidad Visual Para Cliente"
       data-img="images/proyecto3.jpg"
       data-tags="Branding,Logo,Identidad"
-      data-points="Concepto basado en la marca|Variantes (color/monocromo)|Entrega lista para redes|Aplicación simple y moderna"
+      data-points="Concepto Basado En La Marca|Variantes (Color/Monocromo)|Entrega Lista Para Redes|Aplicación Simple Y Moderna"
       data-link=""
       data-linktext=""
     >
-      <img src="images/proyecto3.jpg" alt="Logo diseñado para cliente" loading="lazy" />
+      <img src="images/proyecto3.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" />
       <div class="meta">
         <div>
           <strong>Proyecto 03 — Logo</strong>
-          <p class="mini">Identidad visual para marca</p>
+          <p class="mini">Identidad Visual Para Cliente</p>
         </div>
         <span class="chip">Branding</span>
       </div>
     </button>
 
-    <!-- 4: Logo -->
-    <button
-      class="workCardBtn card tile span-4 reveal"
-      style="--d:240ms"
+    <button class="workCardBtn card tile span-4 reveal" style="--d:240ms"
       data-title="Proyecto 04 — Logo"
-      data-sub="Diseño de marca y concepto"
+      data-sub="Diseño De Marca Y Concepto"
       data-img="images/proyecto4.jpg"
       data-tags="Branding,Logo,Concepto"
-      data-points="Diseño limpio y memorable|Buena legibilidad|Versión para impresión|Archivos listos para uso"
+      data-points="Diseño Limpio Y Memorable|Buena Legibilidad|Versión Para Impresión|Archivos Listos Para Uso"
       data-link=""
       data-linktext=""
     >
-      <img src="images/proyecto4.jpg" alt="Logo diseñado para cliente" loading="lazy" />
+      <img src="images/proyecto4.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" />
       <div class="meta">
         <div>
           <strong>Proyecto 04 — Logo</strong>
-          <p class="mini">Diseño de marca y concepto</p>
+          <p class="mini">Diseño De Marca Y Concepto</p>
         </div>
         <span class="chip">Branding</span>
       </div>
     </button>
 
-    <!-- 5: Logo -->
-    <button
-      class="workCardBtn card tile span-4 reveal"
-      style="--d:320ms"
+    <button class="workCardBtn card tile span-4 reveal" style="--d:320ms"
       data-title="Proyecto 05 — Logo"
-      data-sub="Logo limpio y moderno"
+      data-sub="Logo Limpio Y Moderno"
       data-img="images/proyecto5.jpg"
       data-tags="Branding,Logo,Minimal"
-      data-points="Minimal y profesional|Escalable (funciona en pequeño)|Versión para fondo oscuro/claro|Identidad coherente"
+      data-points="Minimal Y Profesional|Escalable (Funciona En Pequeño)|Versión Para Fondo Oscuro/Claro|Identidad Coherente"
       data-link=""
       data-linktext=""
     >
-      <img src="images/proyecto5.jpg" alt="Logo diseñado para cliente" loading="lazy" />
+      <img src="images/proyecto5.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" />
       <div class="meta">
         <div>
           <strong>Proyecto 05 — Logo</strong>
-          <p class="mini">Logo limpio y moderno</p>
+          <p class="mini">Logo Limpio Y Moderno</p>
         </div>
         <span class="chip">Branding</span>
       </div>
@@ -529,27 +500,24 @@
 
 <section class="section reveal" id="services">
   <h2>Servicios</h2>
-  <p>Branding, diseño para redes, páginas web, y contenido que convierte.</p>
+  <p>Branding, Diseño Para Redes, Páginas Web, Y Contenido Que Convierte.</p>
 
   <div class="list stagger">
     <div class="card item reveal" style="--d:0ms">
       <strong>Branding</strong>
-      <p>Identidad visual completa (logo, paleta, guías, piezas).</p>
+      <p>Identidad Visual Completa (Logo, Paleta, Guías, Piezas).</p>
     </div>
-
     <div class="card item reveal" style="--d:80ms">
       <strong>Diseño Web</strong>
-      <p>Landing y portafolios rápidos, modernos y responsive.</p>
+      <p>Landing Y Portafolios Rápidos, Modernos Y Responsive.</p>
     </div>
-
     <div class="card item reveal" style="--d:160ms">
       <strong>Redes Sociales</strong>
-      <p>Posts, carruseles, anuncios y plantillas.</p>
+      <p>Posts, Carruseles, Anuncios Y Plantillas.</p>
     </div>
-
     <div class="card item reveal" style="--d:240ms">
       <strong>Marketing</strong>
-      <p>Estrategia digital para crecer y convertir.</p>
+      <p>Estrategia Digital Para Crecer Y Convertir.</p>
     </div>
   </div>
 </section>
@@ -563,27 +531,26 @@
 </section>
 
 <footer class="reveal">
-  © <span id="y"></span> Reyes Graphic — Hecho con amor.
+  © <span id="y"></span> Reyes Graphic — Hecho Con Amor.
 </footer>
 
 </div>
 
 <a class="wa" href="https://wa.me/18496536397" target="_blank" rel="noopener">WhatsApp</a>
 
-<!-- MODAL -->
 <div class="modal" id="modal" aria-hidden="true">
   <div class="backdrop" data-close="1"></div>
   <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle">
     <div class="dialogTop">
       <div>
         <h3 class="dialogTitle" id="mTitle">Proyecto</h3>
-        <p class="dialogSub" id="mSub">Detalles del proyecto</p>
+        <p class="dialogSub" id="mSub">Detalles Del Proyecto</p>
       </div>
       <button class="closeBtn" id="mClose" aria-label="Cerrar">Cerrar ✕</button>
     </div>
 
     <div class="dialogMedia">
-      <img id="mImg" src="" alt="Vista del proyecto" />
+      <img id="mImg" src="" alt="Vista Del Proyecto" />
     </div>
 
     <div class="dialogBody">
@@ -602,10 +569,8 @@
 </div>
 
 <script>
-  // Año
   document.getElementById("y").textContent = new Date().getFullYear();
 
-  // Scroll reveal
   const items = document.querySelectorAll(".reveal");
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -617,7 +582,6 @@
   }, { threshold: 0.12 });
   items.forEach(el => io.observe(el));
 
-  // ===== Modal logic =====
   const modal = document.getElementById("modal");
   const mTitle = document.getElementById("mTitle");
   const mSub = document.getElementById("mSub");
@@ -626,7 +590,6 @@
   const mTags = document.getElementById("mTags");
   const mActions = document.getElementById("mActions");
   const mClose = document.getElementById("mClose");
-
   let lastFocused = null;
 
   function openModal(data){
@@ -635,9 +598,8 @@
     mTitle.textContent = data.title || "Proyecto";
     mSub.textContent = data.sub || "";
     mImg.src = data.img || "";
-    mImg.alt = data.title || "Vista del proyecto";
+    mImg.alt = data.title || "Vista Del Proyecto";
 
-    // bullets
     mBullets.innerHTML = "";
     (data.points || []).forEach(p => {
       const li = document.createElement("li");
@@ -645,7 +607,6 @@
       mBullets.appendChild(li);
     });
 
-    // tags
     mTags.innerHTML = "";
     (data.tags || []).forEach(t => {
       const span = document.createElement("span");
@@ -654,19 +615,16 @@
       mTags.appendChild(span);
     });
 
-    // actions
     mActions.innerHTML = "";
 
-    // botón whatsapp
     const wa = document.createElement("a");
     wa.className = "btn primary";
     wa.href = "https://wa.me/18496536397";
     wa.target = "_blank";
     wa.rel = "noopener";
-    wa.textContent = "Cotizar por WhatsApp";
+    wa.textContent = "Cotizar Por WhatsApp";
     mActions.appendChild(wa);
 
-    // botón ver link si existe
     if (data.link){
       const a = document.createElement("a");
       a.className = "btn ghost";
@@ -690,7 +648,6 @@
     if (lastFocused) lastFocused.focus();
   }
 
-  // Abrir modal al click en cards
   document.querySelectorAll(".workCardBtn").forEach(btn => {
     btn.addEventListener("click", () => {
       const points = (btn.dataset.points || "").split("|").filter(Boolean);
@@ -708,13 +665,11 @@
     });
   });
 
-  // cerrar por botón y backdrop
   mClose.addEventListener("click", closeModal);
   modal.addEventListener("click", (e) => {
     if (e.target && e.target.dataset && e.target.dataset.close) closeModal();
   });
 
-  // cerrar con ESC
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
   });
