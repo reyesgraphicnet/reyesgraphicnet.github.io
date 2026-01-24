@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ReyesGraphic — Diseño & Marketing</title>
+  <title>Reyes Graphic — Diseño & Marketing</title>
 
   <style>
     :root{
@@ -63,9 +63,8 @@
       border-radius:999px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.06);
-      transition:.2s;
+      transition:transform .2s ease, opacity .2s ease;
     }
-
     .btn:hover{transform:translateY(-1px)}
 
     .btn.primary{
@@ -113,26 +112,53 @@
       border-radius:var(--radius);
       overflow:hidden;
       backdrop-filter:blur(12px);
-      transition:.2s;
+      transition: transform .25s ease, border-color .25s ease;
+      position:relative;
+    }
+    .card:hover{transform:translateY(-3px); border-color: rgba(255,255,255,.20)}
+
+    /* Imagen real dentro del proyecto */
+    .tile{
+      min-height:260px;
+      position:relative;
+      display:flex;
+      align-items:flex-end;
     }
 
-    .card:hover{transform:translateY(-3px)}
+    .tile img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:saturate(1.05) contrast(1.05);
+      transform:scale(1.02);
+    }
 
-    .tile{min-height:260px;position:relative}
-
-    .tile::before{
+    /* overlay para que el texto se lea siempre */
+    .tile::after{
       content:"";
-      position:absolute;inset:0;
+      position:absolute; inset:0;
       background:
-        radial-gradient(600px 260px at 30% 20%, rgba(30,144,255,.22), transparent 55%),
-        radial-gradient(600px 260px at 80% 20%, rgba(0,224,184,.18), transparent 55%);
+        linear-gradient(180deg, rgba(7,11,16,.10), rgba(7,11,16,.80)),
+        radial-gradient(800px 300px at 20% 10%, rgba(30,144,255,.18), transparent 55%),
+        radial-gradient(800px 300px at 80% 20%, rgba(0,224,184,.16), transparent 55%);
+      pointer-events:none;
     }
 
     .meta{
-      position:absolute;left:16px;right:16px;bottom:16px;
-      display:flex;justify-content:space-between;align-items:end;
+      position:relative;
+      padding:16px;
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
       gap:12px;
+      z-index:1;
     }
+
+    .meta strong{display:block}
+    .meta .sub{margin:6px 0 0}
 
     .chip{
       padding:8px 12px;
@@ -140,7 +166,8 @@
       border:1px solid var(--line);
       font-size:12px;
       color:var(--muted);
-      background:rgba(255,255,255,.05);
+      background:rgba(255,255,255,.06);
+      white-space:nowrap;
     }
 
     .span-7{grid-column:span 7}
@@ -182,11 +209,36 @@
       font-weight:800;
       box-shadow:var(--glow);
       z-index:999;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+    .wa:hover{transform:translateY(-2px);opacity:.95}
+
+    /* ===== Scroll Animations ===== */
+    .reveal{
+      opacity:0;
+      transform: translateY(16px);
+      transition: opacity .7s ease, transform .7s ease;
+      will-change: opacity, transform;
+    }
+    .reveal.in{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* Stagger para cards */
+    .stagger .reveal{
+      transition-delay: var(--d, 0ms);
     }
 
     @media(max-width:820px){
       .links{display:none}
       .span-7,.span-5,.span-6,.span-4,.item{grid-column:1/-1}
+      .hero{padding:54px 0 18px}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .reveal{opacity:1;transform:none;transition:none}
+      .btn,.card,.wa{transition:none}
     }
   </style>
 </head>
@@ -194,7 +246,7 @@
 <body>
 <div class="wrap">
 
-<header class="nav">
+<header class="nav reveal">
   <div class="brand"><span class="dot"></span> Reyes Graphic</div>
   <nav class="links">
     <a href="#work">Trabajo</a>
@@ -205,49 +257,70 @@
 </header>
 
 <section class="hero">
-  <div class="kicker">Diseño & Branding</div>
-  <h1>Diseño que se ve pro y vende</h1>
-  <p class="sub">
+  <div class="kicker reveal">Diseño & Branding</div>
+  <h1 class="reveal">Diseño que se ve pro y vende</h1>
+  <p class="sub reveal">
     Branding, diseño para redes y páginas web modernas que convierten visitas en clientes.
   </p>
 
-  <div class="cta">
+  <div class="cta reveal">
     <a class="btn primary" href="#work">Ver trabajos</a>
     <a class="btn" href="#contact">Cotizar</a>
   </div>
 
-  <div class="grid" id="work">
-    <div class="card tile span-7">
+  <!-- PROYECTOS con imágenes -->
+  <div class="grid stagger" id="work">
+    <a class="card tile span-7 reveal" style="--d:0ms" href="#">
+      <img
+        src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80"
+        alt="Proyecto de identidad visual"
+        loading="lazy"
+      />
       <div class="meta">
         <div>
           <strong>Proyecto 01 — Identidad Visual</strong>
-          <p class="sub">Logo + branding</p>
+          <p class="sub">Logo + sistema + piezas para redes</p>
         </div>
         <span class="chip">Branding</span>
       </div>
-    </div>
+    </a>
 
-    <div class="card tile span-5">
+    <a class="card tile span-5 reveal" style="--d:80ms" href="#">
+      <img
+        src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=1600&q=80"
+        alt="Proyecto web"
+        loading="lazy"
+      />
       <div class="meta">
         <div>
           <strong>Proyecto 02 — Web</strong>
-          <p class="sub">Landing moderna</p>
+          <p class="sub">Landing rápida y elegante</p>
         </div>
         <span class="chip">Web</span>
       </div>
-    </div>
+    </a>
 
-    <div class="card tile span-4">
+    <a class="card tile span-4 reveal" style="--d:160ms" href="#">
+      <img
+        src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1600&q=80"
+        alt="Diseño para redes sociales"
+        loading="lazy"
+      />
       <div class="meta">
         <div>
           <strong>Proyecto 03</strong>
-          <p class="sub">Diseño de posts</p>
+          <p class="sub">Posts & anuncios</p>
         </div>
         <span class="chip">Social</span>
       </div>
-    </div>
+    </a>
 
-    <div class="card tile span-4">
+    <a class="card tile span-4 reveal" style="--d:240ms" href="#">
+      <img
+        src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=1600&q=80"
+        alt="Packaging"
+        loading="lazy"
+      />
       <div class="meta">
         <div>
           <strong>Proyecto 04</strong>
@@ -255,9 +328,14 @@
         </div>
         <span class="chip">Print</span>
       </div>
-    </div>
+    </a>
 
-    <div class="card tile span-4">
+    <a class="card tile span-4 reveal" style="--d:320ms" href="#">
+      <img
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
+        alt="Edición creativa"
+        loading="lazy"
+      />
       <div class="meta">
         <div>
           <strong>Proyecto 05</strong>
@@ -265,38 +343,70 @@
         </div>
         <span class="chip">Creative</span>
       </div>
+    </a>
+  </div>
+</section>
+
+<section class="section reveal" id="services">
+  <h2>Servicios</h2>
+  <p>Branding, diseño para redes, páginas web, y contenido que convierte.</p>
+
+  <div class="list stagger">
+    <div class="card item reveal" style="--d:0ms">
+      <strong>Branding</strong>
+      <p>Identidad visual completa (logo, paleta, guías, piezas).</p>
+    </div>
+
+    <div class="card item reveal" style="--d:80ms">
+      <strong>Diseño Web</strong>
+      <p>Landing y portafolios rápidos, modernos y responsive.</p>
+    </div>
+
+    <div class="card item reveal" style="--d:160ms">
+      <strong>Redes Sociales</strong>
+      <p>Posts, carruseles, anuncios y plantillas.</p>
+    </div>
+
+    <div class="card item reveal" style="--d:240ms">
+      <strong>Marketing</strong>
+      <p>Estrategia digital para crecer y convertir.</p>
     </div>
   </div>
 </section>
 
-<section class="section" id="services">
-  <h2>Servicios</h2>
-  <div class="list">
-    <div class="card item"><strong>Branding</strong><p>Identidad visual completa</p></div>
-    <div class="card item"><strong>Diseño Web</strong><p>Landing y portafolios</p></div>
-    <div class="card item"><strong>Redes Sociales</strong><p>Contenido visual</p></div>
-    <div class="card item"><strong>Marketing</strong><p>Estrategia digital</p></div>
-  </div>
-</section>
-
-<section class="section" id="contact">
+<section class="section reveal" id="contact">
   <h2>Contacto</h2>
   <p>
     <a href="mailto:info@reyesgraphic.net">info@reyesgraphic.net</a><br>
-    <a href="https://instagram.com/reyesgraphic" target="_blank">@reyesgraphic</a>
+    <a href="https://instagram.com/reyesgraphic" target="_blank" rel="noopener">@reyesgraphic</a>
   </p>
 </section>
 
-<footer>
+<footer class="reveal">
   © <span id="y"></span> Reyes Graphic — Hecho con amor.
 </footer>
 
 </div>
 
-<a class="wa" href="https://wa.me/18496536397" target="_blank">WhatsApp</a>
+<a class="wa" href="https://wa.me/18496536397" target="_blank" rel="noopener">WhatsApp</a>
 
 <script>
+  // Año
   document.getElementById("y").textContent = new Date().getFullYear();
+
+  // Scroll reveal (IntersectionObserver)
+  const items = document.querySelectorAll(".reveal");
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        io.unobserve(e.target); // anima una vez
+      }
+    });
+  }, { threshold: 0.12 });
+
+  items.forEach(el => io.observe(el));
 </script>
 
 </body>
