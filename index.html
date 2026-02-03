@@ -3,10 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- ===== FAVICON A PRUEBA DE FALLOS ===== -->
-<link rel="icon" href="images/Favicon3.ico">
-
-  <title>Reyes Graphic — Diseño & Marketing</title>
+  <meta name="description" content="Reyes Graphic: Branding, diseño para redes y páginas web modernas que convierten visitas en clientes.">
+  <link rel="preload" as="image" href="images/logo.png" fetchpriority="high">
+<!-- ===== FAVICON A PRUEBA DE FALLOS (mejor para PageSpeed) ===== -->
+  <link rel="icon" href="images/Favicon3.ico" sizes="any">
+  <link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicon-16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+  <meta name="theme-color" content="#070b10">
+<title>Reyes Graphic — Diseño & Marketing</title>
 
   <style>
     :root{
@@ -36,7 +41,24 @@
     a{text-decoration:none;color:inherit}
     .wrap{max-width:1100px;margin:auto;padding:28px 18px 70px}
 
-    /* ===== icon base + hover ===== */
+    
+    /* ===== Performance (PageSpeed) ===== */
+    /* Evita que el navegador pinte secciones fuera de pantalla hasta que se necesiten */
+    .section, footer { content-visibility: auto; contain-intrinsic-size: 800px; }
+    /* Reduce costo en equipos lentos: solo aplica blur si el navegador lo soporta bien */
+    @supports ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
+      .nav, .card { -webkit-
+
+}
+      .backdrop { -webkit-
+
+}
+    }
+    @supports not ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
+      .nav, .card { background: rgba(10,16,24,.78); }
+      .backdrop { background: rgba(0,0,0,.72); }
+    }
+/* ===== icon base + hover ===== */
     .ico{
       width:16px;height:16px;
       display:inline-block;
@@ -51,8 +73,7 @@
       padding:14px 16px;
       border:1px solid var(--line);
       border-radius:999px;
-      backdrop-filter:blur(12px);
-      background:rgba(10,16,24,.55);
+background:rgba(10,16,24,.55);
       position:sticky;top:14px;z-index:10;
     }
     .brand{
@@ -185,8 +206,7 @@
       border:1px solid var(--line);
       border-radius:var(--radius);
       overflow:hidden;
-      backdrop-filter:blur(12px);
-      transition: transform .25s ease, border-color .25s ease;
+transition: transform .25s ease, border-color .25s ease;
       position:relative;
     }
     .card:hover{transform:translateY(-3px); border-color: rgba(255,255,255,.20)}
@@ -413,7 +433,7 @@
   <div class="wrap">
     <header class="nav reveal">
       <div class="brand">
-        <img class="logo" src="images/logo.png" alt="Logo Reyes Graphic" />
+        <img class="logo" src="images/logo.png" alt="Logo Reyes Graphic" width="28" height="28" decoding="async" fetchpriority="high" />
         <span class="brandText"><span class="dot"></span> Reyes Graphic</span>
       </div>
 
@@ -495,7 +515,7 @@
           data-link="https://www.reyesgraphic.net/"
           data-linktext="Ver Referencia"
         >
-          <img src="images/proyecto1.jpg" alt="Sitio Web Realizado Para Un Cliente" loading="lazy" />
+          <img src="images/proyectov1.jpg" alt="Sitio Web Realizado Para Un Cliente" loading="lazy" width="1600" height="900" decoding="async" />
           <div class="meta">
             <div>
               <strong>Proyecto 01 — Web Para Cliente</strong>
@@ -508,13 +528,13 @@
         <button class="workCardBtn card tile span-5 reveal" style="--d:80ms"
           data-title="Proyecto 02 — Instagram"
           data-sub="Gestión De Contenido Y Diseño Visual"
-          data-img="images/proyecto2.jpg"
+          data-img="images/proyectov2.jpg"
           data-tags="Social,Contenido,Branding"
           data-points="Diseño De Línea Gráfica Consistente|Programación De Contenido|Optimización Visual Del Feed|Piezas Para Anuncios Y Stories"
           data-link="https://instagram.com/reyesgraphic"
           data-linktext="Ver Instagram"
         >
-          <img src="images/proyecto2.jpg" alt="Cuenta De Instagram Gestionada Por Reyes Graphic" loading="lazy" />
+          <img src="images/proyecto2.jpg" alt="Cuenta De Instagram Gestionada Por Reyes Graphic" loading="lazy" width="1600" height="900" decoding="async" />
           <div class="meta">
             <div>
               <strong>Proyecto 02 — Instagram</strong>
@@ -527,13 +547,13 @@
         <button class="workCardBtn card tile span-4 reveal" style="--d:160ms"
           data-title="Proyecto 03 — Logo"
           data-sub="Identidad Visual Para Cliente"
-          data-img="images/proyecto3.jpg"
+          data-img="images/proyectov3.jpg"
           data-tags="Branding,Logo,Identidad"
           data-points="Concepto Basado En La Marca|Variantes (Color/Monocromo)|Entrega Lista Para Redes|Aplicación Simple Y Moderna"
           data-link=""
           data-linktext=""
         >
-          <img src="images/proyecto3.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" />
+          <img src="images/proyecto3.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" width="1600" height="900" decoding="async" />
           <div class="meta">
             <div>
               <strong>Proyecto 03 — Logo</strong>
@@ -546,13 +566,13 @@
         <button class="workCardBtn card tile span-4 reveal" style="--d:240ms"
           data-title="Proyecto 04 — Logo"
           data-sub="Diseño De Marca Y Concepto"
-          data-img="images/proyecto4.jpg"
+          data-img="images/proyectov4.jpg"
           data-tags="Branding,Logo,Concepto"
           data-points="Diseño Limpio Y Memorable|Buena Legibilidad|Versión Para Impresión|Archivos Listos Para Uso"
           data-link=""
           data-linktext=""
         >
-          <img src="images/proyecto4.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" />
+          <img src="images/proyecto4.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" width="1600" height="900" decoding="async" />
           <div class="meta">
             <div>
               <strong>Proyecto 04 — Logo</strong>
@@ -571,7 +591,7 @@
           data-link=""
           data-linktext=""
         >
-          <img src="images/proyecto5.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" />
+          <img src="images/proyectov5.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" width="1600" height="900" decoding="async" />
           <div class="meta">
             <div>
               <strong>Proyecto 05 — Logo</strong>
@@ -670,7 +690,7 @@
       </div>
 
       <div class="dialogMedia">
-        <img id="mImg" src="" alt="Vista Del Proyecto" />
+        <img id="mImg" src="" alt="Vista Del Proyecto" loading="lazy" decoding="async" />
       </div>
 
       <div class="dialogBody">
