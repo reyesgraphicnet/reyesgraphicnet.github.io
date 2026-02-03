@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Reyes Graphic: Branding, diseño para redes y páginas web modernas que convierten visitas en clientes.">
+  <link rel="preload" as="image" href="images/logo.png" fetchpriority="high">
+<!-- ===== FAVICON A PRUEBA DE FALLOS (mejor para PageSpeed) ===== -->
+  <link rel="icon" href="images/Favicon3.ico" sizes="any">
+  <link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicon-16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
+  <meta name="theme-color" content="#070b10">
+<title>Reyes Graphic — Diseño & Marketing</title>
+
+  <style>
+    :root{
+      --bg:#070b10;
+      --card:#0b121b;
+      --text:#f5f7fb;
+      --muted:#a7b0bf;
+      --line:rgba(255,255,255,.12);
+      --radius:18px;
+      --blue:#1e90ff;
+      --green:#00e0b8;
+      --gradient: linear-gradient(135deg, var(--blue), var(--green));
+      --glow: 0 18px 55px rgba(0,224,184,.25);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 500px at 75% -5%, rgba(30,144,255,.18), transparent 55%),
+        radial-gradient(900px 500px at 15% 25%, rgba(0,224,184,.16), transparent 55%),
+        radial-gradient(700px 420px at 50% 70%, rgba(255,255,255,.05), transparent 60%),
+        var(--bg);
+      color:var(--text);
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1100px;margin:auto;padding:28px 18px 70px}
+
+    
+    /* ===== Performance (PageSpeed) ===== */
+    /* Evita que el navegador pinte secciones fuera de pantalla hasta que se necesiten */
+    .section, footer { content-visibility: auto; contain-intrinsic-size: 800px; }
+    /* Reduce costo en equipos lentos: solo aplica blur si el navegador lo soporta bien */
+    @supports ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
+      .nav, .card { -webkit-
+
+}
+      .backdrop { -webkit-
+
+}
+    }
+    @supports not ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
+      .nav, .card { background: rgba(10,16,24,.78); }
+      .backdrop { background: rgba(0,0,0,.72); }
+    }
+/* ===== icon base + hover ===== */
+    .ico{
+      width:16px;height:16px;
+      display:inline-block;
+      vertical-align:middle;
+      transition: transform .18s ease, opacity .18s ease;
+      opacity:.92;
+    }
+
+    /* ===== NAV ===== */
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 16px;
+      border:1px solid var(--line);
+      border-radius:999px;
+background:rgba(10,16,24,.55);
+      position:sticky;top:14px;z-index:10;
+    }
+    .brand{
+      display:flex; gap:10px; align-items:center;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .logo{
+      width:28px; height:28px; border-radius:8px;
+      object-fit:contain;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .brandText{display:flex; align-items:center; gap:10px}
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:var(--gradient);
+      box-shadow:0 0 20px rgba(0,224,184,.55);
+    }
+    .links{
+      display:flex; gap:14px;
+      font-size:14px;
+      color:var(--muted);
+      align-items:center;
+    }
+    .links a{
+      position:relative;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      transition: background .2s ease, color .2s ease, transform .2s ease;
+    }
+    .links a::after{
+      content:"";
+      position:absolute;
+      left:12px; right:12px; bottom:4px;
+      height:2px; border-radius:999px;
+      background:var(--gradient);
+      transform:scaleX(0);
+      transform-origin:left;
+      transition:transform .18s ease;
+      opacity:.9;
+    }
+    .links a:hover{
+      color:var(--text);
+      background: rgba(255,255,255,.05);
+      transform: translateY(-1px);
+    }
+    .links a:hover::after{transform:scaleX(1)}
+    .links a:hover .ico{transform: translateY(-1px) scale(1.06); opacity:1}
+
+    .btn{
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      transition:transform .2s ease, opacity .2s ease, border-color .2s ease;
+      font-size:14px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-1px); border-color:rgba(255,255,255,.20)}
+    .btn.primary{
+      background:var(--gradient);
+      color:#041014;
+      font-weight:800;
+      border:none;
+      box-shadow:var(--glow);
+    }
+    .btn.primary:hover{opacity:.92}
+    .btn.ghost{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.14);
+      color:var(--text);
+    }
+
+    /* ===== HERO ===== */
+    .hero{padding:70px 0 30px}
+    .kicker{
+      text-transform:uppercase;
+      font-size:13px;
+      letter-spacing:.15em;
+      color:var(--muted);
+    }
+    h1{
+      font-size:clamp(38px,6vw,64px);
+      margin:12px 0 14px;
+      line-height:1.05;
+      background:var(--gradient);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    /* ===== GANCHO (HERO TITLE) ===== */
+    .hero-title{
+      font-size:clamp(38px,6vw,64px);
+      margin:12px 0 14px;
+      line-height:1.05;
+      font-weight:800;
+
+      /* Quitamos el degradado del h1 general para que se vea limpio + con highlight */
+      background:none;
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: initial;
+      color: var(--text);
+      letter-spacing:-.01em;
+    }
+    .hero-title .highlight{
+      color: var(--green);
+      font-weight:900;
+      text-shadow: 0 0 28px rgba(0,224,184,.22);
+    }
+
+    .sub{max-width:60ch;color:var(--muted);line-height:1.6; font-size:16px}
+    .cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+
+    /* ===== GRID ===== */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+      margin-top:32px;
+    }
+    .card{
+      background:rgba(11,18,27,.65);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+transition: transform .25s ease, border-color .25s ease;
+      position:relative;
+    }
+    .card:hover{transform:translateY(-3px); border-color: rgba(255,255,255,.20)}
+    .tile{
+      min-height:260px;
+      position:relative;
+      display:flex;
+      align-items:flex-end;
+    }
+    .tile img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transform:scale(1.02);
+      filter:saturate(1.05) contrast(1.05);
+    }
+    .tile::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(7,11,16,.10), rgba(7,11,16,.82)),
+        radial-gradient(800px 300px at 20% 10%, rgba(30,144,255,.18), transparent 55%),
+        radial-gradient(800px 300px at 80% 20%, rgba(0,224,184,.16), transparent 55%);
+      pointer-events:none;
+    }
+    .meta{
+      position:relative;
+      padding:16px;
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:12px;
+      z-index:1;
+    }
+    .meta strong{display:block; font-size:16px}
+    .meta .mini{margin:6px 0 0; color:var(--muted); font-size:13px; line-height:1.4}
+    .chip{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      font-size:12px;
+      color:var(--muted);
+      background:rgba(255,255,255,.06);
+      white-space:nowrap;
+    }
+    .span-7{grid-column:span 7}
+    .span-5{grid-column:span 5}
+    .span-4{grid-column:span 4}
+
+    /* ===== SECTIONS ===== */
+    .section{margin-top:44px}
+    .section h2{margin:0 0 10px; font-size:20px}
+    .section p{margin:0; color:var(--muted); line-height:1.6}
+    .list{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+    .item{grid-column:span 6;padding:18px}
+    .item p{margin:8px 0 0;color:var(--muted);line-height:1.6}
+
+    /* contacto con iconos */
+    .contactLinks{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-top:10px;
+    }
+    .contactLinks a{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:var(--text);
+      opacity:.92;
+      transition: transform .18s ease, opacity .18s ease;
+    }
+    .contactLinks a:hover{transform: translateY(-1px); opacity:1}
+    .contactLinks a:hover .ico{transform: translateY(-1px) scale(1.06); opacity:1}
+
+    footer{
+      margin-top:50px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* WhatsApp */
+    .wa{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      padding:14px 16px;
+      border-radius:999px;
+      background:var(--gradient);
+      color:#041014;
+      font-weight:900;
+      box-shadow:var(--glow);
+      z-index:999;
+      transition: transform .2s ease, opacity .2s ease;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .wa:hover{transform:translateY(-2px);opacity:.95}
+    .wa:hover .ico{transform: translateY(-1px) scale(1.06); opacity:1}
+
+    /* ===== Scroll Animations ===== */
+    .reveal{
+      opacity:0;
+      transform: translateY(16px);
+      transition: opacity .75s ease, transform .75s ease;
+      will-change: opacity, transform;
+    }
+    .reveal.in{
+      opacity:1;
+      transform: translateY(0);
+    }
+    .stagger .reveal{ transition-delay: var(--d, 0ms); }
+
+    /* ===== Modal ===== */
+    .modal{position:fixed;inset:0;display:none;z-index:1000}
+    .modal.open{display:block}
+    .backdrop{position:absolute;inset:0;background:rgba(0,0,0,.65);backdrop-filter: blur(8px)}
+    .dialog{
+      position:relative;
+      width:min(960px, calc(100% - 28px));
+      margin: 70px auto;
+      border-radius: 22px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(11,18,27,.75);
+      overflow:hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,.55);
+    }
+    .dialogTop{display:flex;justify-content:space-between;gap:12px;padding:16px 16px 0 16px;align-items:flex-start}
+    .dialogTitle{margin:0;font-size:18px;letter-spacing:-.01em}
+    .dialogSub{margin:6px 0 0;color:var(--muted);font-size:14px;line-height:1.5;max-width:70ch}
+    .closeBtn{
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      border-radius:999px;
+      padding:8px 12px;
+      cursor:pointer;
+      transition: transform .15s ease, opacity .15s ease;
+      white-space:nowrap;
+    }
+    .closeBtn:hover{transform:translateY(-1px);opacity:.95}
+    .dialogMedia{
+      position:relative;
+      aspect-ratio: 16 / 9;
+      background: rgba(255,255,255,.05);
+      margin: 14px 16px 0 16px;
+      border-radius: 18px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .dialogMedia img{width:100%;height:100%;object-fit:cover;display:block}
+    .dialogBody{
+      padding: 14px 16px 16px 16px;
+      display:grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap:14px;
+      align-items:start;
+    }
+    .bullets{margin:0;padding-left: 18px;color: var(--muted);line-height:1.7;font-size:14px}
+    .side{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      border-radius: 18px;
+      padding: 14px;
+    }
+    .sideTitle{
+      margin:0 0 10px 0;
+      font-size:14px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing:.12em;
+    }
+    .pillRow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+    .pill{
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    .workCardBtn{
+      width:100%;
+      display:block;
+      cursor:pointer;
+      border:none;
+      padding:0;
+      background:transparent;
+      text-align:left;
+      color:inherit;
+    }
+
+    @media(max-width:820px){
+      .links{display:none}
+      .span-7,.span-5,.span-4,.item{grid-column:1/-1}
+      .hero{padding:54px 0 18px}
+      .dialogBody{grid-template-columns:1fr}
+      .dialog{margin: 50px auto}
+      .logo{width:26px;height:26px}
+      .hero-title{ text-align:center; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      .reveal{opacity:1;transform:none;transition:none}
+      .btn,.card,.wa,.closeBtn,.ico{transition:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="nav reveal">
+      <div class="brand">
+        <img class="logo" src="images/logo.png" alt="Logo Reyes Graphic" width="28" height="28" decoding="async" fetchpriority="high" />
+        <span class="brandText"><span class="dot"></span> Reyes Graphic</span>
+      </div>
+
+      <!-- MENÚ con iconos (Instagram + Facebook + TikTok arriba) -->
+      <nav class="links">
+        <a href="#work" aria-label="Trabajo">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M10 3h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v3H2V8a2 2 0 0 1 2-2h4V5a2 2 0 0 1 2-2zm4 3V5h-4v1h4zM2 13h20v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6z"/>
+          </svg>
+          Trabajo
+        </a>
+
+        <a href="#services" aria-label="Servicios">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 2 2 7l10 5 10-5-10-5zm0 7L2 4v3l10 5 10-5V4l-10 5zm0 4L2 8v3l10 5 10-5V8l-10 5z"/>
+          </svg>
+          Servicios
+        </a>
+
+        <a href="#contact" aria-label="Contacto">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          Contacto
+        </a>
+
+        <!-- Instagram arriba -->
+        <a href="https://instagram.com/reyesgraphic" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3.5A5.5 5.5 0 1 0 17.5 12 5.51 5.51 0 0 0 12 7.5zm0 9A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 16.5zm5.75-9.75a1.25 1.25 0 1 0 1.25 1.25 1.25 1.25 0 0 0-1.25-1.25z"/>
+          </svg>
+          Instagram
+        </a>
+
+        <!-- Facebook arriba -->
+        <a href="https://www.facebook.com/reyesgraphicrd" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.1V12h2.1V9.8c0-2.1 1.3-3.3 3.2-3.3.9 0 1.9.2 1.9.2v2.1h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.4l-.4 2.9h-2v7A10 10 0 0 0 22 12z"/>
+          </svg>
+          Facebook
+        </a>
+
+        <!-- TikTok arriba -->
+        <a href="https://www.tiktok.com/@reyesgraphic" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M16.5 3c.5 2.7 2.4 4.7 5 5.1v3.1c-1.9-.1-3.6-.7-5-1.8v6.1c0 3.5-2.9 6.5-6.6 6.5-3.6 0-6.4-2.9-6.4-6.5 0-3.7 3.1-6.7 6.8-6.5v3.3c-1.7-.2-3.1 1-3.1 2.7 0 1.6 1.3 3 2.9 3 1.7 0 3.1-1.3 3.1-3.1V3h3.3z"/>
+          </svg>
+          TikTok
+        </a>
+      </nav>
+
+      <a class="btn" href="#contact">Hablemos</a>
+    </header>
+
+    <section class="hero">
+      <div class="kicker reveal">Diseño & Branding</div>
+
+      <!-- ✅ GANCHO NUEVO -->
+      <h1 class="hero-title reveal">
+        No vendemos diseños… <br>
+        <span class="highlight">creamos marcas que venden por ti 24/7.</span>
+      </h1>
+
+      <p class="sub reveal">
+        Branding, Diseño Para Redes Y Páginas Web Modernas Que Convierten Visitas En Clientes.
+      </p>
+      <div class="cta reveal">
+        <a class="btn primary" href="#work">Ver Trabajos</a>
+        <a class="btn" href="#contact">Cotizar</a>
+      </div>
+
+      <div class="grid stagger" id="work">
+        <button class="workCardBtn card tile span-7 reveal" style="--d:0ms"
+          data-title="Proyecto 01 — Web Para Cliente"
+          data-sub="Diseño Y Desarrollo De Página Web"
+          data-img="images/proyecto1.jpg"
+          data-tags="Web,UI/UX,Responsive"
+          data-points="Diseño Moderno Y Limpio|Optimizada Para Móvil (Responsive)|Enfoque En Conversión (CTA Claros)|Estructura Rápida Y Elegante"
+          data-link="https://www.reyesgraphic.net/"
+          data-linktext="Ver Referencia"
+        >
+          <img src="images/proyecto1.jpg" alt="Sitio Web Realizado Para Un Cliente" loading="lazy" width="1600" height="900" decoding="async" />
+          <div class="meta">
+            <div>
+              <strong>Proyecto 01 — Web Para Cliente</strong>
+              <p class="mini">Diseño Y Desarrollo De Página Web</p>
+            </div>
+            <span class="chip">Web</span>
+          </div>
+        </button>
+
+        <button class="workCardBtn card tile span-5 reveal" style="--d:80ms"
+          data-title="Proyecto 02 — Instagram"
+          data-sub="Gestión De Contenido Y Diseño Visual"
+          data-img="images/proyecto2.jpg"
+          data-tags="Social,Contenido,Branding"
+          data-points="Diseño De Línea Gráfica Consistente|Programación De Contenido|Optimización Visual Del Feed|Piezas Para Anuncios Y Stories"
+          data-link="https://instagram.com/reyesgraphic"
+          data-linktext="Ver Instagram"
+        >
+          <img src="images/proyecto2.jpg" alt="Cuenta De Instagram Gestionada Por Reyes Graphic" loading="lazy" width="1600" height="900" decoding="async" />
+          <div class="meta">
+            <div>
+              <strong>Proyecto 02 — Instagram</strong>
+              <p class="mini">Gestión De Contenido Y Diseño Visual</p>
+            </div>
+            <span class="chip">Social</span>
+          </div>
+        </button>
+
+        <button class="workCardBtn card tile span-4 reveal" style="--d:160ms"
+          data-title="Proyecto 03 — Logo"
+          data-sub="Identidad Visual Para Cliente"
+          data-img="images/proyecto3.jpg"
+          data-tags="Branding,Logo,Identidad"
+          data-points="Concepto Basado En La Marca|Variantes (Color/Monocromo)|Entrega Lista Para Redes|Aplicación Simple Y Moderna"
+          data-link=""
+          data-linktext=""
+        >
+          <img src="images/proyecto3.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" width="1600" height="900" decoding="async" />
+          <div class="meta">
+            <div>
+              <strong>Proyecto 03 — Logo</strong>
+              <p class="mini">Identidad Visual Para Cliente</p>
+            </div>
+            <span class="chip">Branding</span>
+          </div>
+        </button>
+
+        <button class="workCardBtn card tile span-4 reveal" style="--d:240ms"
+          data-title="Proyecto 04 — Logo"
+          data-sub="Diseño De Marca Y Concepto"
+          data-img="images/proyecto4.jpg"
+          data-tags="Branding,Logo,Concepto"
+          data-points="Diseño Limpio Y Memorable|Buena Legibilidad|Versión Para Impresión|Archivos Listos Para Uso"
+          data-link=""
+          data-linktext=""
+        >
+          <img src="images/proyecto4.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" width="1600" height="900" decoding="async" />
+          <div class="meta">
+            <div>
+              <strong>Proyecto 04 — Logo</strong>
+              <p class="mini">Diseño De Marca Y Concepto</p>
+            </div>
+            <span class="chip">Branding</span>
+          </div>
+        </button>
+
+        <button class="workCardBtn card tile span-4 reveal" style="--d:320ms"
+          data-title="Proyecto 05 — Logo"
+          data-sub="Logo Limpio Y Moderno"
+          data-img="images/proyecto5.jpg"
+          data-tags="Branding,Logo,Minimal"
+          data-points="Minimal Y Profesional|Escalable (Funciona En Pequeño)|Versión Para Fondo Oscuro/Claro|Identidad Coherente"
+          data-link=""
+          data-linktext=""
+        >
+          <img src="images/proyecto5.jpg" alt="Logo Diseñado Para Cliente" loading="lazy" width="1600" height="900" decoding="async" />
+          <div class="meta">
+            <div>
+              <strong>Proyecto 05 — Logo</strong>
+              <p class="mini">Logo Limpio Y Moderno</p>
+            </div>
+            <span class="chip">Branding</span>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <section class="section reveal" id="services">
+      <h2>Servicios</h2>
+      <p>Branding, Diseño Para Redes, Páginas Web, Y Contenido Que Convierte.</p>
+      <div class="list stagger">
+        <div class="card item reveal" style="--d:0ms">
+          <strong>Branding</strong>
+          <p>Identidad Visual Completa (Logo, Paleta, Guías, Piezas).</p>
+        </div>
+        <div class="card item reveal" style="--d:80ms">
+          <strong>Diseño Web</strong>
+          <p>Landing Y Portafolios Rápidos, Modernos Y Responsive.</p>
+        </div>
+        <div class="card item reveal" style="--d:160ms">
+          <strong>Redes Sociales</strong>
+          <p>Posts, Carruseles, Anuncios Y Plantillas.</p>
+        </div>
+        <div class="card item reveal" style="--d:240ms">
+          <strong>Marketing</strong>
+          <p>Estrategia Digital Para Crecer Y Convertir.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <h2>Contacto</h2>
+
+      <div class="contactLinks">
+        <!-- correo -->
+        <a href="mailto:info@reyesgraphic.net">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          info@reyesgraphic.net
+        </a>
+
+        <!-- instagram -->
+        <a href="https://instagram.com/reyesgraphic" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3.5A5.5 5.5 0 1 0 17.5 12 5.51 5.51 0 0 0 12 7.5zm0 9A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 16.5zm5.75-9.75a1.25 1.25 0 1 0 1.25 1.25 1.25 1.25 0 0 0-1.25-1.25z"/>
+          </svg>
+          @reyesgraphic
+        </a>
+
+        <!-- FACEBOOK (TU LINK) -->
+        <a href="https://www.facebook.com/reyesgraphicrd" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.1V12h2.1V9.8c0-2.1 1.3-3.3 3.2-3.3.9 0 1.9.2 1.9.2v2.1h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.4l-.4 2.9h-2v7A10 10 0 0 0 22 12z"/>
+          </svg>
+          Facebook
+        </a>
+
+        <!-- TIKTOK (TU LINK) -->
+        <a href="https://www.tiktok.com/@reyesgraphic" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M16.5 3c.5 2.7 2.4 4.7 5 5.1v3.1c-1.9-.1-3.6-.7-5-1.8v6.1c0 3.5-2.9 6.5-6.6 6.5-3.6 0-6.4-2.9-6.4-6.5 0-3.7 3.1-6.7 6.8-6.5v3.3c-1.7-.2-3.1 1-3.1 2.7 0 1.6 1.3 3 2.9 3 1.7 0 3.1-1.3 3.1-3.1V3h3.3z"/>
+          </svg>
+          TikTok
+        </a>
+      </div>
+    </section>
+
+    <footer class="reveal">
+      © <span id="y"></span> Reyes Graphic — Hecho Con Amor.
+    </footer>
+  </div>
+
+  <!-- WhatsApp con icono -->
+  <a class="wa" href="https://wa.me/18496536397" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg class="ico" viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M16.003 3C9.383 3 4 8.383 4 15.003c0 2.646.863 5.096 2.33 7.084L5 29l7.1-1.864a11.94 11.94 0 0 0 3.903.65C22.617 27.786 28 22.403 28 15.003 28 8.383 22.617 3 16.003 3zm0 21.79a9.77 9.77 0 0 1-3.335-.587l-.238-.087-4.212 1.106 1.125-4.1-.155-.264a9.77 9.77 0 1 1 6.815 3.932zm5.357-7.36c-.293-.147-1.736-.857-2.006-.956-.27-.098-.467-.147-.664.148-.196.293-.762.956-.934 1.152-.172.197-.344.222-.637.074-.293-.147-1.238-.456-2.357-1.456-.87-.777-1.457-1.735-1.63-2.028-.172-.293-.018-.45.13-.597.132-.132.293-.344.44-.516.148-.172.197-.293.295-.49.098-.196.05-.37-.025-.517-.074-.147-.664-1.603-.91-2.195-.24-.576-.483-.498-.664-.507l-.566-.01c-.196 0-.517.074-.787.37-.27.293-1.033 1.01-1.033 2.468 0 1.457 1.058 2.865 1.205 3.063.148.196 2.083 3.18 5.047 4.458.705.304 1.255.486 1.684.622.707.225 1.35.193 1.857.117.566-.085 1.736-.71 1.982-1.395.246-.687.246-1.277.172-1.395-.074-.117-.27-.197-.566-.344z"/>
+    </svg>
+    WhatsApp
+  </a>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="backdrop" data-close="1"></div>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <div class="dialogTop">
+        <div>
+          <h3 class="dialogTitle" id="mTitle">Proyecto</h3>
+          <p class="dialogSub" id="mSub">Detalles Del Proyecto</p>
+        </div>
+        <button class="closeBtn" id="mClose" aria-label="Cerrar">Cerrar ✕</button>
+      </div>
+
+      <div class="dialogMedia">
+        <img id="mImg" src="" alt="Vista Del Proyecto" loading="lazy" decoding="async" />
+      </div>
+
+      <div class="dialogBody">
+        <div>
+          <ul class="bullets" id="mBullets"></ul>
+        </div>
+        <div class="side">
+          <div class="sideTitle">Tags</div>
+          <div class="pillRow" id="mTags"></div>
+
+          <div class="sideTitle" style="margin-top:14px">Acciones</div>
+          <div class="actions" id="mActions"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Reveal animation
+    const items = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(el => io.observe(el));
+
+    // Modal logic
+    const modal = document.getElementById("modal");
+    const mTitle = document.getElementById("mTitle");
+    const mSub = document.getElementById("mSub");
+    const mImg = document.getElementById("mImg");
+    const mBullets = document.getElementById("mBullets");
+    const mTags = document.getElementById("mTags");
+    const mActions = document.getElementById("mActions");
+    const mClose = document.getElementById("mClose");
+    let lastFocused = null;
+
+    function openModal(data){
+      lastFocused = document.activeElement;
+
+      mTitle.textContent = data.title || "Proyecto";
+      mSub.textContent = data.sub || "";
+      mImg.src = data.img || "";
+      mImg.alt = data.title || "Vista Del Proyecto";
+
+      mBullets.innerHTML = "";
+      (data.points || []).forEach(p => {
+        const li = document.createElement("li");
+        li.textContent = p;
+        mBullets.appendChild(li);
+      });
+
+      mTags.innerHTML = "";
+      (data.tags || []).forEach(t => {
+        const span = document.createElement("span");
+        span.className = "pill";
+        span.textContent = t;
+        mTags.appendChild(span);
+      });
+
+      mActions.innerHTML = "";
+      const wa = document.createElement("a");
+      wa.className = "btn primary";
+      wa.href = "https://wa.me/18496536397";
+      wa.target = "_blank";
+      wa.rel = "noopener";
+      wa.textContent = "Cotizar Por WhatsApp";
+      mActions.appendChild(wa);
+
+      if (data.link){
+        const a = document.createElement("a");
+        a.className = "btn ghost";
+        a.href = data.link;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = data.linktext || "Ver";
+        mActions.appendChild(a);
+      }
+
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      mClose.focus();
+    }
+
+    function closeModal(){
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      if (lastFocused) lastFocused.focus();
+    }
+
+    document.querySelectorAll(".workCardBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const points = (btn.dataset.points || "").split("|").filter(Boolean);
+        const tags = (btn.dataset.tags || "").split(",").map(s => s.trim()).filter(Boolean);
+
+        openModal({
+          title: btn.dataset.title,
+          sub: btn.dataset.sub,
+          img: btn.dataset.img,
+          points,
+          tags,
+          link: btn.dataset.link,
+          linktext: btn.dataset.linktext
+        });
+      });
+    });
+
+    mClose.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+      if (e.target && e.target.dataset && e.target.dataset.close) closeModal();
+    });
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+    });
+  </script>
+</body>
+</html>
