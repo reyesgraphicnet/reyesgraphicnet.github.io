@@ -14,7 +14,44 @@
   <link rel="apple-touch-icon" href="/images/favicon.ico">
   <meta name="theme-color" content="#070b10">
 
-  <title>Reyes Graphic — Diseño & Marketing</title>
+  <title>Reyes Graphic | Diseño Gráfico, Branding y Web</title>
+
+  <!-- SEO: Canonical -->
+  <link rel="canonical" href="https://reyesgraphic.net/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Reyes Graphic | Diseño Gráfico, Branding y Web" />
+  <meta property="og:description" content="Branding, diseño para redes y páginas web modernas que convierten visitas en clientes." />
+  <meta property="og:image" content="https://reyesgraphic.net/images/og-cover.jpg" />
+  <meta property="og:url" content="https://reyesgraphic.net/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Reyes Graphic" />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reyes Graphic | Diseño Gráfico, Branding y Web" />
+  <meta name="twitter:description" content="Branding, diseño para redes y páginas web modernas que convierten visitas en clientes." />
+  <meta name="twitter:image" content="https://reyesgraphic.net/images/og-cover.jpg" />
+
+  <!-- Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Reyes Graphic",
+    "url": "https://reyesgraphic.net",
+    "logo": "https://reyesgraphic.net/images/logo3.png",
+    "email": "info@reyesgraphic.net",
+    "description": "Branding, diseño gráfico para redes sociales y páginas web modernas que convierten visitas en clientes.",
+    "serviceType": ["Branding", "Diseño Web", "Redes Sociales", "Marketing Digital", "Diseño Gráfico"],
+    "sameAs": [
+      "https://instagram.com/reyesgraphic",
+      "https://facebook.com/reyesgraphic",
+      "https://tiktok.com/@reyesgraphic"
+    ]
+  }
+  </script>
 
   <style>
     :root{
@@ -324,6 +361,43 @@
     .wa:hover{transform:translateY(-2px);opacity:.95}
     .wa:hover .ico{transform: translateY(-1px) scale(1.06); opacity:1}
 
+    /* ===== CLIENTES TRUST BAR ===== */
+    .clients-section{margin-top:44px}
+    .clients-section h2{margin:0 0 18px; font-size:20px}
+    .clients-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+      gap:10px;
+    }
+    .client-chip{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      padding:18px 12px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(11,18,27,.55);
+      text-align:center;
+      transition: transform .22s ease, border-color .22s ease, background .22s ease;
+      cursor:pointer;
+      text-decoration:none;
+      color:var(--text);
+    }
+    .client-chip:hover{
+      transform:translateY(-3px);
+      border-color:rgba(0,224,184,.45);
+      background:rgba(0,224,184,.06);
+    }
+    .client-chip .c-name{font-size:13px; font-weight:700; line-height:1.3}
+    .client-chip .c-type{font-size:11px; color:var(--muted); letter-spacing:.06em; text-transform:uppercase}
+    .client-chip .c-dot{
+      width:8px; height:8px; border-radius:50%;
+      background:var(--gradient);
+      box-shadow: 0 0 8px rgba(0,224,184,.5);
+    }
+
     /* ===== Scroll Animations ===== */
     .reveal{
       opacity:0;
@@ -500,6 +574,48 @@
       </div>
     </section>
 
+    <!-- CLIENTES DE CONFIANZA -->
+    <section class="clients-section reveal" id="clientes">
+      <h2>Marcas que confían en nosotros</h2>
+      <div class="clients-grid stagger">
+        <a class="client-chip reveal" style="--d:0ms" href="https://www.instagram.com/piacererestaurant_/" target="_blank" rel="noopener">
+          <div class="c-dot"></div>
+          <span class="c-name">Piacere Restaurant</span>
+          <span class="c-type">Restaurante · Branding</span>
+        </a>
+        <a class="client-chip reveal" style="--d:60ms" href="https://www.instagram.com/tuorlymusic/" target="_blank" rel="noopener">
+          <div class="c-dot"></div>
+          <span class="c-name">Tuorly Music</span>
+          <span class="c-type">Música · Redes</span>
+        </a>
+        <a class="client-chip reveal" style="--d:120ms" href="https://www.instagram.com/vamoalflownoticias/" target="_blank" rel="noopener">
+          <div class="c-dot"></div>
+          <span class="c-name">Vamos al Flow Noticias</span>
+          <span class="c-type">Media · Redes</span>
+        </a>
+        <a class="client-chip reveal" style="--d:180ms" href="https://www.instagram.com/canastudiosrd/" target="_blank" rel="noopener">
+          <div class="c-dot"></div>
+          <span class="c-name">Cana Studios RD</span>
+          <span class="c-type">Estudio · Web · Logo</span>
+        </a>
+        <a class="client-chip reveal" style="--d:240ms" href="https://www.instagram.com/montanaviralmedia/" target="_blank" rel="noopener">
+          <div class="c-dot"></div>
+          <span class="c-name">Montana Viral Media</span>
+          <span class="c-type">Media · Logo</span>
+        </a>
+        <a class="client-chip reveal" style="--d:300ms" href="https://reyesgaragedoorsllc.com/" target="_blank" rel="noopener">
+          <div class="c-dot"></div>
+          <span class="c-name">Reyes Garage Doors LLC</span>
+          <span class="c-type">Empresa · Web</span>
+        </a>
+        <a class="client-chip reveal" style="--d:360ms" href="https://ocacontroldeplagas.com/" target="_blank" rel="noopener">
+          <div class="c-dot"></div>
+          <span class="c-name">OCA Control de Plagas</span>
+          <span class="c-type">Empresa · Web</span>
+        </a>
+      </div>
+    </section>
+
     <!-- TRABAJOS (CUADRADO) -->
     <section class="section reveal" id="trabajos">
       <h2>Trabajos</h2>
@@ -516,7 +632,7 @@
           data-link="https://www.reyesgraphic.net/"
           data-linktext="Ver referencia"
         >
-          <img src="images/proyecto1.jpg" alt="Proyecto 1" loading="lazy" decoding="async" />
+          <img src="images/proyecto1.jpg" alt="Diseño web para CanaStudios — UI/UX responsive y optimizado para conversión" loading="lazy" decoding="async" />
           <div class="meta">
             <div>
               <strong>CanaStudios</strong>
@@ -536,7 +652,7 @@
           data-link="https://instagram.com/reyesgraphic"
           data-linktext="Ver Instagram"
         >
-          <img src="images/proyecto2.jpg" alt="Proyecto 2" loading="lazy" decoding="async" />
+          <img src="images/proyecto2.jpg" alt="Gestión de redes sociales y diseño de contenido para Vamos Al Flow Noticias" loading="lazy" decoding="async" />
           <div class="meta">
             <div>
               <strong>Vamos Al Flow Noticias</strong>
@@ -556,7 +672,7 @@
           data-link=""
           data-linktext=""
         >
-          <img src="images/proyecto3.jpg" alt="Proyecto 3" loading="lazy" decoding="async" />
+          <img src="images/proyecto3.jpg" alt="Diseño de logo e identidad visual para Montana Viral" loading="lazy" decoding="async" />
           <div class="meta">
             <div>
               <strong>Montana Viral</strong>
@@ -576,7 +692,7 @@
           data-link=""
           data-linktext=""
         >
-          <img src="images/proyecto4.jpg" alt="Proyecto 4" loading="lazy" decoding="async" />
+          <img src="images/proyecto4.jpg" alt="Logo y branding para CanaStudios — diseño gráfico profesional" loading="lazy" decoding="async" />
           <div class="meta">
             <div>
               <strong>CanaStudios</strong>
@@ -596,13 +712,93 @@
           data-link=""
           data-linktext=""
         >
-          <img src="images/proyecto5.jpg" alt="Proyecto 5" loading="lazy" decoding="async" />
+          <img src="images/proyecto5.jpg" alt="Branding y diseño creativo premium para Turemok Design" loading="lazy" decoding="async" />
           <div class="meta">
             <div>
               <strong>Turemok Design</strong>
               <p class="mini">Diseño</p>
             </div>
             <span class="chip">DISEÑO</span>
+          </div>
+        </button>
+
+        <!-- 6 - Piacere Restaurant -->
+        <button class="workCardBtn card tile reveal" style="--d:400ms"
+          data-title="Piacere Restaurant — Branding &amp; Redes"
+          data-sub="Identidad visual y gestión de redes sociales"
+          data-img="images/piacere.jpg"
+          data-tags="Branding,Redes,Restaurante"
+          data-points="Identidad visual de marca|Diseño de menú y piezas|Contenido para Instagram|Estética premium gastronómica"
+          data-link="https://www.instagram.com/piacererestaurant_/"
+          data-linktext="Ver Instagram"
+        >
+          <img src="images/piacere.jpg" alt="Piacere Restaurant" loading="lazy" decoding="async" />
+          <div class="meta">
+            <div>
+              <strong>Piacere Restaurant</strong>
+              <p class="mini">Branding · Redes</p>
+            </div>
+            <span class="chip">BRANDING</span>
+          </div>
+        </button>
+
+        <!-- 7 - Tuorly Music -->
+        <button class="workCardBtn card tile reveal" style="--d:480ms"
+          data-title="Tuorly Music — Branding Musical"
+          data-sub="Identidad visual para artista musical"
+          data-img="images/tuorly.jpg"
+          data-tags="Branding,Música,Redes"
+          data-points="Identidad visual del artista|Portadas y flyers para lanzamientos|Contenido para redes|Posicionamiento de marca"
+          data-link="https://www.instagram.com/tuorlymusic/"
+          data-linktext="Ver Instagram"
+        >
+          <img src="images/tuorly.jpg" alt="Tuorly Music" loading="lazy" decoding="async" />
+          <div class="meta">
+            <div>
+              <strong>Tuorly Music</strong>
+              <p class="mini">Branding · Música</p>
+            </div>
+            <span class="chip">BRANDING</span>
+          </div>
+        </button>
+
+        <!-- 8 - Reyes Garage Doors LLC -->
+        <button class="workCardBtn card tile reveal" style="--d:560ms"
+          data-title="Reyes Garage Doors LLC — Página Web"
+          data-sub="Diseño y desarrollo web para empresa de puertas de garaje"
+          data-img="images/reyes-garage.jpg"
+          data-tags="Web,Empresa,UI/UX"
+          data-points="Diseño web profesional|Optimizada para móvil|CTA orientados a conversión|Formulario de contacto integrado"
+          data-link="https://reyesgaragedoorsllc.com/"
+          data-linktext="Ver web"
+        >
+          <img src="images/reyes-garage.jpg" alt="Reyes Garage Doors LLC" loading="lazy" decoding="async" />
+          <div class="meta">
+            <div>
+              <strong>Reyes Garage Doors LLC</strong>
+              <p class="mini">Web</p>
+            </div>
+            <span class="chip">WEB</span>
+          </div>
+        </button>
+
+        <!-- 9 - OCA Control de Plagas -->
+        <button class="workCardBtn card tile reveal" style="--d:640ms"
+          data-title="OCA Control de Plagas — Página Web"
+          data-sub="Diseño y desarrollo web para empresa de control de plagas"
+          data-img="images/oca-plagas.jpg"
+          data-tags="Web,Empresa,UI/UX"
+          data-points="Sitio web moderno y profesional|Responsive en móvil y desktop|Servicios destacados con CTA|Posicionamiento local"
+          data-link="https://ocacontroldeplagas.com/"
+          data-linktext="Ver web"
+        >
+          <img src="images/oca-plagas.jpg" alt="OCA Control de Plagas" loading="lazy" decoding="async" />
+          <div class="meta">
+            <div>
+              <strong>OCA Control de Plagas</strong>
+              <p class="mini">Web</p>
+            </div>
+            <span class="chip">WEB</span>
           </div>
         </button>
       </div>
