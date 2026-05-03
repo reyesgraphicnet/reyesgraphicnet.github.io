@@ -1,1044 +1,835 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Reyes Graphic: Branding, diseño para redes y páginas web modernas que convierten visitas en clientes.">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N59YL2JEGK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N59YL2JEGK');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Preload del logo (debe existir EXACTO en /images/) -->
-  <link rel="preload" as="image" href="images/logo3.png" fetchpriority="high">
+  <!-- SEO Primary -->
+  <title>ReyesGraphic | Diseño Gráfico, Branding & Web — Higüey, RD</title>
+  <meta name="description" content="ReyesGraphic: Branding, diseño gráfico para redes sociales y páginas web premium que convierten visitas en clientes. Higüey, República Dominicana.">
+  <meta name="keywords" content="diseño gráfico Higüey, branding República Dominicana, diseño web RD, redes sociales diseño, ReyesGraphic, identidad visual Higüey, logo diseño RD">
+  <meta name="author" content="ReyesGraphic">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://reyesgraphic.net/">
+  <meta name="theme-color" content="#080808">
 
-  <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/images/favicon.ico">
-  <meta name="theme-color" content="#070b10">
-
-  <title>Reyes Graphic | Diseño Gráfico, Branding y Web</title>
-
-  <!-- SEO: Canonical -->
-  <link rel="canonical" href="https://reyesgraphic.net/" />
+  <!-- Geo -->
+  <meta name="geo.region" content="DO-11">
+  <meta name="geo.placename" content="Higüey, La Altagracia, República Dominicana">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Reyes Graphic | Diseño Gráfico, Branding y Web" />
-  <meta property="og:description" content="Branding, diseño para redes y páginas web modernas que convierten visitas en clientes." />
-  <meta property="og:image" content="https://reyesgraphic.net/images/og-cover.jpg" />
-  <meta property="og:url" content="https://reyesgraphic.net/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Reyes Graphic" />
-  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://reyesgraphic.net/">
+  <meta property="og:title" content="ReyesGraphic | Branding, Diseño Gráfico & Web">
+  <meta property="og:description" content="No vendemos diseños. Creamos marcas que venden por ti 24/7. Branding, redes y webs premium.">
+  <meta property="og:image" content="https://reyesgraphic.net/images/og-cover.jpg">
+  <meta property="og:locale" content="es_DO">
+  <meta property="og:site_name" content="ReyesGraphic">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Reyes Graphic | Diseño Gráfico, Branding y Web" />
-  <meta name="twitter:description" content="Branding, diseño para redes y páginas web modernas que convierten visitas en clientes." />
-  <meta name="twitter:image" content="https://reyesgraphic.net/images/og-cover.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ReyesGraphic | Branding, Diseño Gráfico & Web">
+  <meta name="twitter:description" content="Branding, diseño para redes y webs modernas que convierten visitas en clientes.">
+  <meta name="twitter:image" content="https://reyesgraphic.net/images/og-cover.jpg">
 
-  <!-- Schema JSON-LD -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Reyes Graphic",
+    "name": "ReyesGraphic",
     "url": "https://reyesgraphic.net",
     "logo": "https://reyesgraphic.net/images/logo3.png",
     "email": "info@reyesgraphic.net",
-    "description": "Branding, diseño gráfico para redes sociales y páginas web modernas que convierten visitas en clientes.",
-    "serviceType": ["Branding", "Diseño Web", "Redes Sociales", "Marketing Digital", "Diseño Gráfico"],
+    "description": "Branding, diseño gráfico para redes sociales y páginas web modernas que convierten visitas en clientes. Higüey, República Dominicana.",
+    "serviceType": ["Branding", "Diseño Web", "Redes Sociales", "Marketing Digital", "Identidad Visual"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Higüey",
+      "addressRegion": "La Altagracia",
+      "addressCountry": "DO"
+    },
     "sameAs": [
       "https://instagram.com/reyesgraphic",
-      "https://facebook.com/reyesgraphic",
-      "https://tiktok.com/@reyesgraphic"
+      "https://www.facebook.com/reyesgraphicrd",
+      "https://www.tiktok.com/@reyesgraphic"
     ]
   }
   </script>
 
-  <style>
-    :root{
-      --bg:#070b10;
-      --card:#0b121b;
-      --text:#f5f7fb;
-      --muted:#a7b0bf;
-      --line:rgba(255,255,255,.12);
-      --radius:18px;
-      --blue:#1e90ff;
-      --green:#00e0b8;
-      --gradient:linear-gradient(135deg,var(--blue),var(--green));
-      --glow: 0 18px 55px rgba(0,224,184,.25);
-      --shadow: 0 22px 55px rgba(0,0,0,.55);
-    }
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(900px 500px at 75% -5%, rgba(30,144,255,.18), transparent 55%),
-        radial-gradient(900px 500px at 15% 25%, rgba(0,224,184,.16), transparent 55%),
-        radial-gradient(700px 420px at 50% 70%, rgba(255,255,255,.05), transparent 60%),
-        var(--bg);
-      color:var(--text);
-      overflow-x:hidden;
-    }
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-    .wrap{max-width:1100px;margin:auto;padding:28px 18px 70px}
+  <!-- Fonts (preconnect + stylesheet in HTML, faster than CSS @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap">
+  <link rel="preload" as="image" href="images/logo3.png" fetchpriority="high">
 
-    /* ===== Performance (PageSpeed) ===== */
-    .section, footer { }
-
-    @supports ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
-      .nav { -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
-      .backdrop { -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
-    }
-    @supports not ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
-      .nav { background: rgba(10,16,24,.78); }
-      .backdrop { background: rgba(0,0,0,.72); }
-    }
-
-    /* ===== icon base + hover ===== */
-    .ico{
-      width:16px;height:16px;
-      display:inline-block;
-      vertical-align:middle;
-      transition: transform .18s ease, opacity .18s ease;
-      opacity:.92;
-      fill: currentColor;
-    }
-
-    /* ===== NAV (PILL) ===== */
-    .nav{
-      display:flex;justify-content:space-between;align-items:center;
-      padding:14px 16px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background:rgba(10,16,24,.55);
-      position:sticky;top:14px;z-index:10;
-      gap:12px;
-    }
-
-    /* Brand: SOLO LOGO (sin texto duplicado) */
-    .brand{
-      display:flex;
-      align-items:center;
-      min-width: 220px;
-    }
-    .logo{
-      width:auto;
-      height:42px;
-      object-fit:contain;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,.35));
-    }
-
-    .links{
-      display:flex; gap:14px;
-      font-size:14px;
-      color:var(--muted);
-      align-items:center;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .links a{
-      position:relative;
-      display:flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 10px;
-      border-radius:999px;
-      transition: background .2s ease, color .2s ease, transform .2s ease;
-      white-space:nowrap;
-    }
-    .links a::after{
-      content:"";
-      position:absolute;
-      left:12px; right:12px; bottom:4px;
-      height:2px; border-radius:999px;
-      background:var(--gradient);
-      transform:scaleX(0);
-      transform-origin:left;
-      transition:transform .18s ease;
-      opacity:.9;
-    }
-    .links a:hover{
-      color:var(--text);
-      background: rgba(255,255,255,.05);
-      transform: translateY(-1px);
-    }
-    .links a:hover::after{transform:scaleX(1)}
-    .links a:hover .ico{transform: translateY(-1px) scale(1.06); opacity:1}
-
-    .btn{
-      padding:10px 16px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.06);
-      transition:transform .2s ease, opacity .2s ease, border-color .2s ease;
-      font-size:14px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      cursor:pointer;
-      color: var(--text);
-    }
-    .btn:hover{transform:translateY(-1px); border-color:rgba(255,255,255,.20)}
-    .btn.primary{
-      background:var(--gradient);
-      color:#041014;
-      font-weight:800;
-      border:none;
-      box-shadow:var(--glow);
-    }
-    .btn.primary:hover{opacity:.92}
-    .btn.ghost{
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.14);
-      color:var(--text);
-    }
-
-    /* ===== HERO ===== */
-    .hero{padding:62px 0 20px}
-    .kicker{
-      text-transform:uppercase;
-      font-size:13px;
-      letter-spacing:.15em;
-      color:var(--muted);
-    }
-    .hero-title{
-      font-size:clamp(38px,6vw,64px);
-      margin:12px 0 14px;
-      line-height:1.05;
-      font-weight:900;
-      color: var(--text);
-      letter-spacing:-.01em;
-    }
-    .hero-title .highlight{
-      color: var(--green);
-      font-weight:900;
-      text-shadow: 0 0 28px rgba(0,224,184,.22);
-    }
-    .sub{max-width:60ch;color:var(--muted);line-height:1.6; font-size:16px}
-    .cta{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
-
-    /* ===== CARDS / SECTIONS ===== */
-    .section{margin-top:44px}
-    .section h2{margin:0 0 10px; font-size:20px}
-    .section p{margin:0; color:var(--muted); line-height:1.6}
-
-    .card{
-      background:rgba(11,18,27,.65);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      overflow:hidden;
-      transition: transform .25s ease, border-color .25s ease;
-      position:relative;
-      box-shadow: 0 12px 38px rgba(0,0,0,.35);
-    }
-    .card:hover{transform:translateY(-3px); border-color: rgba(255,255,255,.20)}
-
-    /* ===== PORTFOLIO CUADRADO (1:1) ===== */
-    .projects{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-      gap:14px;
-      margin-top:18px;
-    }
-
-    .workCardBtn{
-      width:100%;
-      display:block;
-      cursor:pointer;
-      border:none;
-      padding:0;
-      background:transparent;
-      text-align:left;
-      color:inherit;
-    }
-
-    .tile{
-      aspect-ratio:1 / 1;
-      position:relative;
-      display:flex;
-      align-items:flex-end;
-    }
-    .tile img{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      transform:scale(1.02);
-      filter:saturate(1.05) contrast(1.05);
-    }
-    .tile::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(180deg, rgba(7,11,16,.10), rgba(7,11,16,.86)),
-        radial-gradient(800px 300px at 20% 10%, rgba(30,144,255,.18), transparent 55%),
-        radial-gradient(800px 300px at 80% 20%, rgba(0,224,184,.16), transparent 55%);
-      pointer-events:none;
-    }
-
-    .meta{
-      position:relative;
-      padding:16px;
-      width:100%;
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-end;
-      gap:12px;
-      z-index:1;
-    }
-    .meta strong{display:block; font-size:16px}
-    .meta .mini{margin:6px 0 0; color:var(--muted); font-size:13px; line-height:1.4}
-    .chip{
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      font-size:12px;
-      color:var(--muted);
-      background:rgba(255,255,255,.06);
-      white-space:nowrap;
-    }
-
-    /* ===== SERVICES ===== */
-    .list{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-      gap:14px;
-      margin-top:14px;
-    }
-    .item{padding:18px}
-    .item p{margin:8px 0 0;color:var(--muted);line-height:1.6}
-
-    /* contacto con iconos */
-    .contactLinks{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      margin-top:10px;
-    }
-    .contactLinks a{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      color:var(--text);
-      opacity:.92;
-      transition: transform .18s ease, opacity .18s ease;
-    }
-    .contactLinks a:hover{transform: translateY(-1px); opacity:1}
-    .contactLinks a:hover .ico{transform: translateY(-1px) scale(1.06); opacity:1}
-
-    footer{
-      margin-top:50px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    /* WhatsApp (floating) */
-    .wa{
-      position:fixed;
-      right:16px;
-      bottom:16px;
-      padding:14px 16px;
-      border-radius:999px;
-      background:var(--gradient);
-      color:#041014;
-      font-weight:900;
-      box-shadow:var(--glow);
-      z-index:999;
-      transition: transform .2s ease, opacity .2s ease;
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-    .wa:hover{transform:translateY(-2px);opacity:.95}
-    .wa:hover .ico{transform: translateY(-1px) scale(1.06); opacity:1}
-
-    /* ===== CLIENTES TRUST BAR ===== */
-    .clients-section{margin-top:44px}
-    .clients-section h2{margin:0 0 18px; font-size:20px}
-    .clients-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(148px, 1fr));
-      gap:12px;
-    }
-    .client-chip{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:flex-start;
-      gap:10px;
-      padding:20px 14px 16px;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:rgba(11,18,27,.55);
-      text-align:center;
-      transition: transform .22s ease, border-color .22s ease, background .22s ease;
-      cursor:pointer;
-      text-decoration:none;
-      color:var(--text);
-    }
-    .client-chip:hover{
-      transform:translateY(-3px);
-      border-color:rgba(0,224,184,.45);
-      background:rgba(0,224,184,.06);
-    }
-    .client-chip .c-name{font-size:13px; font-weight:700; line-height:1.3}
-    .client-chip .c-type{font-size:11px; color:var(--muted); letter-spacing:.06em; text-transform:uppercase; margin-top:2px}
-
-    /* Logo container */
-    .c-logo{
-      width:64px; height:64px;
-      border-radius:12px;
-      overflow:hidden;
-      display:flex; align-items:center; justify-content:center;
-      background:rgba(255,255,255,.07);
-      border:1px solid rgba(255,255,255,.1);
-      flex-shrink:0;
-    }
-    .c-logo img{
-      width:100%; height:100%;
-      object-fit:contain;
-      padding:6px;
-    }
-    .c-logo img.cover{
-      object-fit:cover;
-      padding:0;
-    }
-    /* Initial fallback */
-    .c-initial{
-      width:64px; height:64px;
-      border-radius:12px;
-      background:var(--gradient);
-      display:flex; align-items:center; justify-content:center;
-      font-size:22px; font-weight:900;
-      color:#041014;
-      flex-shrink:0;
-    }
-
-    /* ===== Scroll Animations ===== */
-    .reveal{
-      opacity:0;
-      transform: translateY(16px);
-      transition: opacity .75s ease, transform .75s ease;
-      will-change: opacity, transform;
-    }
-    .reveal.in{
-      opacity:1;
-      transform: translateY(0);
-    }
-    .stagger .reveal{ transition-delay: var(--d, 0ms); }
-
-    /* ===== Modal (pro) ===== */
-    .modal{position:fixed;inset:0;display:none;z-index:1000}
-    .modal.open{display:block}
-    .backdrop{position:absolute;inset:0;background:rgba(0,0,0,.65)}
-    .dialog{
-      position:relative;
-      width:min(960px, calc(100% - 28px));
-      margin: 70px auto;
-      border-radius: 22px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(11,18,27,.75);
-      overflow:hidden;
-      box-shadow: 0 24px 80px rgba(0,0,0,.55);
-    }
-    .dialogTop{display:flex;justify-content:space-between;gap:12px;padding:16px 16px 0 16px;align-items:flex-start}
-    .dialogTitle{margin:0;font-size:18px;letter-spacing:-.01em}
-    .dialogSub{margin:6px 0 0;color:var(--muted);font-size:14px;line-height:1.5;max-width:70ch}
-    .closeBtn{
-      border:1px solid rgba(255,255,255,.16);
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      border-radius:999px;
-      padding:8px 12px;
-      cursor:pointer;
-      transition: transform .15s ease, opacity .15s ease;
-      white-space:nowrap;
-    }
-    .closeBtn:hover{transform:translateY(-1px);opacity:.95}
-    .dialogMedia{
-      position:relative;
-      aspect-ratio: 16 / 9;
-      background: rgba(255,255,255,.05);
-      margin: 14px 16px 0 16px;
-      border-radius: 18px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.10);
-    }
-    .dialogMedia img{width:100%;height:100%;object-fit:cover;display:block}
-    .dialogBody{
-      padding: 14px 16px 16px 16px;
-      display:grid;
-      grid-template-columns: 1.3fr .7fr;
-      gap:14px;
-      align-items:start;
-    }
-    .bullets{margin:0;padding-left: 18px;color: var(--muted);line-height:1.7;font-size:14px}
-    .side{
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      border-radius: 18px;
-      padding: 14px;
-    }
-    .sideTitle{
-      margin:0 0 10px 0;
-      font-size:14px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing:.12em;
-    }
-    .pillRow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
-    .pill{
-      font-size:12px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: var(--muted);
-      white-space: nowrap;
-    }
-    .actions{display:flex;gap:10px;flex-wrap:wrap}
-
-    @media(max-width:860px){
-      .links{display:none}
-      .dialogBody{grid-template-columns:1fr}
-      .dialog{margin: 50px auto}
-      .hero{padding:52px 0 16px}
-      .brand{min-width:auto}
-      .logo{height:38px}
-    }
-    @media (prefers-reduced-motion: reduce){
-      .reveal{opacity:1;transform:none;transition:none}
-      .btn,.card,.wa,.closeBtn,.ico{transition:none}
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <div class="wrap">
 
-    <!-- NAV -->
-    <header class="nav reveal">
-      <div class="brand">
-        <!-- Logo arriba izquierda (logo3) -->
-        <img class="logo" src="images/logo3.png" alt="Reyes Graphic" decoding="async" fetchpriority="high" />
-      </div>
+<!-- WA Float -->
+<a href="https://wa.me/18496536397?text=Hola%20ReyesGraphic%2C%20quiero%20cotizar%20un%20proyecto"
+   class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M16.003 3C9.383 3 4 8.383 4 15.003c0 2.646.863 5.096 2.33 7.084L5 29l7.1-1.864a11.94 11.94 0 0 0 3.903.65C22.617 27.786 28 22.403 28 15.003 28 8.383 22.617 3 16.003 3zm5.357 14.43c-.293-.147-1.736-.857-2.006-.956-.27-.098-.467-.147-.664.148-.196.293-.762.956-.934 1.152-.172.197-.344.222-.637.074-.293-.147-1.238-.456-2.357-1.456-.87-.777-1.457-1.735-1.63-2.028-.172-.293-.018-.45.13-.597.132-.132.293-.344.44-.516.148-.172.197-.293.295-.49.098-.196.05-.37-.025-.517-.074-.147-.664-1.603-.91-2.195-.24-.576-.483-.498-.664-.507l-.566-.01c-.196 0-.517.074-.787.37-.27.293-1.033 1.01-1.033 2.468 0 1.457 1.058 2.865 1.205 3.063.148.196 2.083 3.18 5.047 4.458.705.304 1.255.486 1.684.622.707.225 1.35.193 1.857.117.566-.085 1.736-.71 1.982-1.395.246-.687.246-1.277.172-1.395-.074-.117-.27-.197-.566-.344z"/>
+  </svg>
+  WhatsApp
+</a>
 
-      <!-- MENÚ con iconos + redes arriba -->
-      <nav class="links">
-        <a href="#trabajos" aria-label="Trabajo">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M10 3h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v3H2V8a2 2 0 0 1 2-2h4V5a2 2 0 0 1 2-2zm4 3V5h-4v1h4zM2 13h20v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6z"/>
-          </svg>
-          Trabajos
-        </a>
-
-        <a href="#servicios" aria-label="Servicios">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 2 2 7l10 5 10-5-10-5zm0 7L2 4v3l10 5 10-5V4l-10 5zm0 4L2 8v3l10 5 10-5V8l-10 5z"/>
-          </svg>
-          Servicios
-        </a>
-
-        <a href="#contacto" aria-label="Contacto">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-          </svg>
-          Contacto
-        </a>
-
-        <a href="https://instagram.com/reyesgraphic" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3.5A5.5 5.5 0 1 0 17.5 12 5.51 5.51 0 0 0 12 7.5zm0 9A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 16.5zm5.75-9.75a1.25 1.25 0 1 0 1.25 1.25 1.25 1.25 0 0 0-1.25-1.25z"/>
-          </svg>
-          Instagram
-        </a>
-
-        <a href="https://www.facebook.com/reyesgraphicrd" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.1V12h2.1V9.8c0-2.1 1.3-3.3 3.2-3.3.9 0 1.9.2 1.9.2v2.1h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.4l-.4 2.9h-2v7A10 10 0 0 0 22 12z"/>
-          </svg>
-          Facebook
-        </a>
-
-        <a href="https://www.tiktok.com/@reyesgraphic" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M16.5 3c.5 2.7 2.4 4.7 5 5.1v3.1c-1.9-.1-3.6-.7-5-1.8v6.1c0 3.5-2.9 6.5-6.6 6.5-3.6 0-6.4-2.9-6.4-6.5 0-3.7 3.1-6.7 6.8-6.5v3.3c-1.7-.2-3.1 1-3.1 2.7 0 1.6 1.3 3 2.9 3 1.7 0 3.1-1.3 3.1-3.1V3h3.3z"/>
-          </svg>
-          TikTok
-        </a>
-      </nav>
-
-      <a class="btn" href="#contacto">Hablemos</a>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="kicker reveal">Diseño · Branding · Web · Redes</div>
-
-      <h1 class="hero-title reveal">
-        No vendemos diseños… <br>
-        <span class="highlight">creamos marcas que venden por ti 24/7.</span>
-      </h1>
-
-      <p class="sub reveal">
-        Branding, diseño para redes y páginas web modernas que convierten visitas en clientes.
-      </p>
-
-      <div class="cta reveal">
-        <a class="btn primary" href="#trabajos">Ver trabajos</a>
-        <a class="btn" href="#contacto">Cotizar</a>
-      </div>
-    </section>
-
-    <!-- CLIENTES DE CONFIANZA -->
-    <section class="clients-section reveal" id="clientes">
-      <h2>Marcas que confían en nosotros</h2>
-      <div class="clients-grid stagger">
-        <a class="client-chip reveal" style="--d:0ms" href="https://www.instagram.com/piacererestaurant_/" target="_blank" rel="noopener">
-          <div class="c-logo"><img src="images/logo-piacere.png" alt="Piacere Restaurant" onerror="this.parentElement.outerHTML='<div class=\'c-initial\'>P</div>'"></div>
-          <span class="c-name">Piacere Restaurant</span>
-          <span class="c-type">Restaurante · Branding</span>
-        </a>
-        <a class="client-chip reveal" style="--d:60ms" href="https://www.instagram.com/tuorlymusic/" target="_blank" rel="noopener">
-          <div class="c-logo"><img class="cover" src="images/logo-tuorly.png" alt="Tuorly Music" onerror="this.parentElement.outerHTML='<div class=\'c-initial\'>T</div>'"></div>
-          <span class="c-name">Tuorly Music</span>
-          <span class="c-type">Música · Redes</span>
-        </a>
-        <a class="client-chip reveal" style="--d:120ms" href="https://www.instagram.com/vamoalflownoticias/" target="_blank" rel="noopener">
-          <div class="c-logo"><img src="images/logo-vamoalflow.png" alt="Vamos al Flow" onerror="this.parentElement.outerHTML='<div class=\'c-initial\'>V</div>'"></div>
-          <span class="c-name">Vamos al Flow Noticias</span>
-          <span class="c-type">Media · Redes</span>
-        </a>
-        <a class="client-chip reveal" style="--d:180ms" href="https://www.instagram.com/canastudiosrd/" target="_blank" rel="noopener">
-          <div class="c-logo"><img src="images/logo-cana.png" alt="Cana Studios RD" onerror="this.parentElement.outerHTML='<div class=\'c-initial\'>C</div>'"></div>
-          <span class="c-name">Cana Studios RD</span>
-          <span class="c-type">Estudio · Web · Logo</span>
-        </a>
-        <a class="client-chip reveal" style="--d:240ms" href="https://www.instagram.com/montanaviralmedia/" target="_blank" rel="noopener">
-          <div class="c-logo"><img src="images/logo-montana.png" alt="Montana Viral Media" onerror="this.parentElement.outerHTML='<div class=\'c-initial\'>M</div>'"></div>
-          <span class="c-name">Montana Viral Media</span>
-          <span class="c-type">Media · Logo</span>
-        </a>
-        <a class="client-chip reveal" style="--d:300ms" href="https://reyesgaragedoorsllc.com/" target="_blank" rel="noopener">
-          <div class="c-logo"><img src="images/logo-reyes-garage.png" alt="Reyes Garage Doors LLC" onerror="this.parentElement.outerHTML='<div class=\'c-initial\'>R</div>'"></div>
-          <span class="c-name">Reyes Garage Doors LLC</span>
-          <span class="c-type">Empresa · Web</span>
-        </a>
-        <a class="client-chip reveal" style="--d:360ms" href="https://ocacontroldeplagas.com/" target="_blank" rel="noopener">
-          <div class="c-logo"><img class="cover" src="images/oca-plagas.jpg" alt="OCA Control de Plagas" onerror="this.parentElement.outerHTML='<div class=\'c-initial\'>O</div>'"></div>
-          <span class="c-name">OCA Control de Plagas</span>
-          <span class="c-type">Empresa · Web</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- TRABAJOS (CUADRADO) -->
-    <section class="section reveal" id="trabajos">
-      <h2>Trabajos</h2>
-      <p>Selecciona un proyecto para ver el modal con detalles, tags y acciones.</p>
-
-      <div class="projects stagger">
-        <!-- 1 -->
-        <button class="workCardBtn card tile reveal" style="--d:0ms"
-          data-title="Proyecto 01 — Web Para Cliente"
-          data-sub="Diseño y desarrollo de página web"
-          data-img="images/proyecto1.jpg"
-          data-tags="Web,UI/UX,Responsive"
-          data-points="Diseño moderno y limpio|Optimizada para móvil (Responsive)|Enfoque en conversión (CTA claros)|Estructura rápida y elegante"
-          data-link="https://www.reyesgraphic.net/"
-          data-linktext="Ver referencia"
-        >
-          <img src="images/proyecto1.jpg" alt="Diseño web para CanaStudios — UI/UX responsive y optimizado para conversión" loading="lazy" decoding="async" />
-          <div class="meta">
-            <div>
-              <strong>CanaStudios</strong>
-              <p class="mini">Web</p>
-            </div>
-            <span class="chip">WEB</span>
-          </div>
-        </button>
-
-        <!-- 2 -->
-        <button class="workCardBtn card tile reveal" style="--d:80ms"
-          data-title="Proyecto 02 — Social Networks"
-          data-sub="Gestión de contenido y diseño visual"
-          data-img="images/proyecto2.jpg"
-          data-tags="Social,Contenido,Branding"
-          data-points="Diseño de línea gráfica consistente|Optimización visual del feed|Piezas para anuncios y stories|Contenido que convierte"
-          data-link="https://instagram.com/reyesgraphic"
-          data-linktext="Ver Instagram"
-        >
-          <img src="images/proyecto2.jpg" alt="Gestión de redes sociales y diseño de contenido para Vamos Al Flow Noticias" loading="lazy" decoding="async" />
-          <div class="meta">
-            <div>
-              <strong>Vamos Al Flow Noticias</strong>
-              <p class="mini">Redes</p>
-            </div>
-            <span class="chip">SOCIAL NETWORKS</span>
-          </div>
-        </button>
-
-        <!-- 3 -->
-        <button class="workCardBtn card tile reveal" style="--d:160ms"
-          data-title="Proyecto 03 — Post"
-          data-sub="Diseño de pieza gráfica"
-          data-img="images/proyecto3.jpg"
-          data-tags="Social,Post,Diseño"
-          data-points="Diseño limpio y llamativo|Listo para publicar|Consistencia visual|Enfoque en mensaje"
-          data-link=""
-          data-linktext=""
-        >
-          <img src="images/proyecto3.jpg" alt="Diseño de logo e identidad visual para Montana Viral" loading="lazy" decoding="async" />
-          <div class="meta">
-            <div>
-              <strong>Montana Viral</strong>
-              <p class="mini">Logo</p>
-            </div>
-            <span class="chip">LOGO</span>
-          </div>
-        </button>
-
-        <!-- 4 -->
-        <button class="workCardBtn card tile reveal" style="--d:240ms"
-          data-title="Proyecto 04 — Reels"
-          data-sub="Edición y estilo visual"
-          data-img="images/proyecto4.jpg"
-          data-tags="Reels,Edición,Contenido"
-          data-points="Edición dinámica|Estructura de retención|Visual pro|Listo para IG/TikTok"
-          data-link=""
-          data-linktext=""
-        >
-          <img src="images/proyecto4.jpg" alt="Logo y branding para CanaStudios — diseño gráfico profesional" loading="lazy" decoding="async" />
-          <div class="meta">
-            <div>
-              <strong>CanaStudios</strong>
-              <p class="mini">Logo</p>
-            </div>
-            <span class="chip">LOGO</span>
-          </div>
-        </button>
-
-        <!-- 5 -->
-        <button class="workCardBtn card tile reveal" style="--d:320ms"
-          data-title="Proyecto 05 — Diseño"
-          data-sub="Diseño creativo"
-          data-img="images/proyecto5.jpg"
-          data-tags="Diseño,Branding,Creativo"
-          data-points="Pieza creativa|Estética premium|Buena legibilidad|Listo para uso"
-          data-link=""
-          data-linktext=""
-        >
-          <img src="images/proyecto5.jpg" alt="Branding y diseño creativo premium para Turemok Design" loading="lazy" decoding="async" />
-          <div class="meta">
-            <div>
-              <strong>Turemok Design</strong>
-              <p class="mini">Diseño</p>
-            </div>
-            <span class="chip">DISEÑO</span>
-          </div>
-        </button>
-
-        <!-- 6 - Piacere Restaurant -->
-        <button class="workCardBtn card tile reveal" style="--d:400ms"
-          data-title="Piacere Restaurant — Branding &amp; Redes"
-          data-sub="Identidad visual y gestión de redes sociales"
-          data-img="images/piacere.jpg"
-          data-tags="Branding,Redes,Restaurante"
-          data-points="Identidad visual de marca|Diseño de menú y piezas|Contenido para Instagram|Estética premium gastronómica"
-          data-link="https://www.instagram.com/piacererestaurant_/"
-          data-linktext="Ver Instagram"
-        >
-          <img src="images/piacere.jpg" alt="Piacere Restaurant" loading="lazy" decoding="async" />
-          <div class="meta">
-            <div>
-              <strong>Piacere Restaurant</strong>
-              <p class="mini">Branding · Redes</p>
-            </div>
-            <span class="chip">BRANDING</span>
-          </div>
-        </button>
-
-        <!-- 7 - Tuorly Music -->
-        <button class="workCardBtn card tile reveal" style="--d:480ms"
-          data-title="Tuorly Music — Branding Musical"
-          data-sub="Identidad visual para artista musical"
-          data-img="images/tuorly.jpg"
-          data-tags="Branding,Música,Redes"
-          data-points="Identidad visual del artista|Portadas y flyers para lanzamientos|Contenido para redes|Posicionamiento de marca"
-          data-link="https://www.instagram.com/tuorlymusic/"
-          data-linktext="Ver Instagram"
-        >
-          <img src="images/tuorly.jpg" alt="Tuorly Music" loading="lazy" decoding="async" />
-          <div class="meta">
-            <div>
-              <strong>Tuorly Music</strong>
-              <p class="mini">Branding · Música</p>
-            </div>
-            <span class="chip">BRANDING</span>
-          </div>
-        </button>
-
-        <!-- 8 - Reyes Garage Doors LLC -->
-        <button class="workCardBtn card tile reveal" style="--d:560ms"
-          data-title="Reyes Garage Doors LLC — Página Web"
-          data-sub="Diseño y desarrollo web para empresa de puertas de garaje"
-          data-img="images/reyes-garage.jpg"
-          data-tags="Web,Empresa,UI/UX"
-          data-points="Diseño web profesional|Optimizada para móvil|CTA orientados a conversión|Formulario de contacto integrado"
-          data-link="https://reyesgaragedoorsllc.com/"
-          data-linktext="Ver web"
-        >
-          <img src="images/reyes-garage.jpg" alt="Reyes Garage Doors LLC" loading="lazy" decoding="async" />
-          <div class="meta">
-            <div>
-              <strong>Reyes Garage Doors LLC</strong>
-              <p class="mini">Web</p>
-            </div>
-            <span class="chip">WEB</span>
-          </div>
-        </button>
-
-        <!-- 9 - OCA Control de Plagas -->
-        <button class="workCardBtn card tile reveal" style="--d:640ms"
-          data-title="OCA Control de Plagas — Página Web"
-          data-sub="Diseño y desarrollo web para empresa de control de plagas"
-          data-img="images/oca-plagas.jpg"
-          data-tags="Web,Empresa,UI/UX"
-          data-points="Sitio web moderno y profesional|Responsive en móvil y desktop|Servicios destacados con CTA|Posicionamiento local"
-          data-link="https://ocacontroldeplagas.com/"
-          data-linktext="Ver web"
-        >
-          <img src="images/oca-plagas.jpg" alt="OCA Control de Plagas" loading="lazy" decoding="async" />
-          <div class="meta">
-            <div>
-              <strong>OCA Control de Plagas</strong>
-              <p class="mini">Web</p>
-            </div>
-            <span class="chip">WEB</span>
-          </div>
-        </button>
-      </div>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section class="section reveal" id="servicios">
-      <h2>Servicios</h2>
-      <p>Branding, diseño para redes, páginas web y contenido que convierte.</p>
-
-      <div class="list stagger">
-        <div class="card item reveal" style="--d:0ms">
-          <strong>Branding</strong>
-          <p>Identidad visual completa (logo, paleta, guías, piezas).</p>
-        </div>
-        <div class="card item reveal" style="--d:80ms">
-          <strong>Diseño Web</strong>
-          <p>Landing y portafolios rápidos, modernos y responsive.</p>
-        </div>
-        <div class="card item reveal" style="--d:160ms">
-          <strong>Redes Sociales</strong>
-          <p>Posts, carruseles, anuncios y plantillas.</p>
-        </div>
-        <div class="card item reveal" style="--d:240ms">
-          <strong>Marketing</strong>
-          <p>Estrategia digital para crecer y convertir.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section class="section reveal" id="contacto">
-      <h2>Contacto</h2>
-
-      <div class="contactLinks">
-        <a href="mailto:info@reyesgraphic.net">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-          </svg>
-          info@reyesgraphic.net
-        </a>
-
-        <a href="https://instagram.com/reyesgraphic" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3.5A5.5 5.5 0 1 0 17.5 12 5.51 5.51 0 0 0 12 7.5zm0 9A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 16.5zm5.75-9.75a1.25 1.25 0 1 0 1.25 1.25 1.25 1.25 0 0 0-1.25-1.25z"/>
-          </svg>
-          @reyesgraphic
-        </a>
-
-        <a href="https://www.facebook.com/reyesgraphicrd" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.1V12h2.1V9.8c0-2.1 1.3-3.3 3.2-3.3.9 0 1.9.2 1.9.2v2.1h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.4l-.4 2.9h-2v7A10 10 0 0 0 22 12z"/>
-          </svg>
-          Facebook
-        </a>
-
-        <a href="https://www.tiktok.com/@reyesgraphic" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M16.5 3c.5 2.7 2.4 4.7 5 5.1v3.1c-1.9-.1-3.6-.7-5-1.8v6.1c0 3.5-2.9 6.5-6.6 6.5-3.6 0-6.4-2.9-6.4-6.5 0-3.7 3.1-6.7 6.8-6.5v3.3c-1.7-.2-3.1 1-3.1 2.7 0 1.6 1.3 3 2.9 3 1.7 0 3.1-1.3 3.1-3.1V3h3.3z"/>
-          </svg>
-          TikTok
-        </a>
-      </div>
-    </section>
-
-    <footer class="reveal">
-      © <span id="y"></span> Reyes Graphic — Hecho con amor.
-    </footer>
+<!-- LOADER -->
+<div id="loader" role="status" aria-label="Cargando ReyesGraphic">
+  <div class="ld-brand">
+    <img class="ld-logo-img" src="images/logo3.png" alt="ReyesGraphic" loading="eager">
   </div>
+  <div class="ld-line"></div>
+  <div class="ld-label">Cargando experiencia</div>
+</div>
 
-  <!-- WhatsApp floating -->
-  <a class="wa" href="https://wa.me/18095551234" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg class="ico" viewBox="0 0 32 32" aria-hidden="true">
-      <path d="M16.003 3C9.383 3 4 8.383 4 15.003c0 2.646.863 5.096 2.33 7.084L5 29l7.1-1.864a11.94 11.94 0 0 0 3.903.65C22.617 27.786 28 22.403 28 15.003 28 8.383 22.617 3 16.003 3zm0 21.79a9.77 9.77 0 0 1-3.335-.587l-.238-.087-4.212 1.106 1.125-4.1-.155-.264a9.77 9.77 0 1 1 6.815 3.932zm5.357-7.36c-.293-.147-1.736-.857-2.006-.956-.27-.098-.467-.147-.664.148-.196.293-.762.956-.934 1.152-.172.197-.344.222-.637.074-.293-.147-1.238-.456-2.357-1.456-.87-.777-1.457-1.735-1.63-2.028-.172-.293-.018-.45.13-.597.132-.132.293-.344.44-.516.148-.172.197-.293.295-.49.098-.196.05-.37-.025-.517-.074-.147-.664-1.603-.91-2.195-.24-.576-.483-.498-.664-.507l-.566-.01c-.196 0-.517.074-.787.37-.27.293-1.033 1.01-1.033 2.468 0 1.457 1.058 2.865 1.205 3.063.148.196 2.083 3.18 5.047 4.458.705.304 1.255.486 1.684.622.707.225 1.35.193 1.857.117.566-.085 1.736-.71 1.982-1.395.246-.687.246-1.277.172-1.395-.074-.117-.27-.197-.566-.344z"/>
-    </svg>
-    WhatsApp
+<!-- MOBILE NAV -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+  <a href="#trabajos">Trabajos</a>
+  <a href="#services">Servicios</a>
+  <a href="/branding">Branding</a>
+  <a href="/diseno-web">Diseño Web</a>
+  <a href="/redes-sociales">Redes</a>
+  <a href="/marketing-digital">Marketing</a>
+  <a href="#clients-sec">Clientes</a>
+  <a href="#contact">Contacto</a>
+  <div class="mobile-nav-soc" aria-label="Redes sociales">
+    <a href="https://instagram.com/reyesgraphic" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+    <a href="https://www.facebook.com/reyesgraphicrd" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.tiktok.com/@reyesgraphic" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.75a8.27 8.27 0 0 0 4.84 1.55V6.85a4.85 4.85 0 0 1-1.07-.16z"/></svg></a>
+    <a href="https://wa.me/18496536397" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16.003 3C9.383 3 4 8.383 4 15.003c0 2.646.863 5.096 2.33 7.084L5 29l7.1-1.864a11.94 11.94 0 0 0 3.903.65C22.617 27.786 28 22.403 28 15.003 28 8.383 22.617 3 16.003 3zm5.357 14.43c-.293-.147-1.736-.857-2.006-.956-.27-.098-.467-.147-.664.148-.196.293-.762.956-.934 1.152-.172.197-.344.222-.637.074-.293-.147-1.238-.456-2.357-1.456-.87-.777-1.457-1.735-1.63-2.028-.172-.293-.018-.45.13-.597.132-.132.293-.344.44-.516.148-.172.197-.293.295-.49.098-.196.05-.37-.025-.517-.074-.147-.664-1.603-.91-2.195-.24-.576-.483-.498-.664-.507l-.566-.01c-.196 0-.517.074-.787.37-.27.293-1.033 1.01-1.033 2.468 0 1.457 1.058 2.865 1.205 3.063.148.196 2.083 3.18 5.047 4.458.705.304 1.255.486 1.684.622.707.225 1.35.193 1.857.117.566-.085 1.736-.71 1.982-1.395.246-.687.246-1.277.172-1.395-.074-.117-.27-.197-.566-.344z"/></svg></a>
+  </div>
+</nav>
+
+<!-- NAVBAR -->
+<header id="nav" role="banner">
+  <a href="#" class="nav-logo" aria-label="ReyesGraphic inicio">
+    <img src="images/logo3.png" alt="ReyesGraphic" decoding="async" fetchpriority="high">
   </a>
+  <nav aria-label="Navegación principal">
+    <ul class="nav-links">
+      <li><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="#clients-sec">Clientes</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+  <a href="#contact" class="nav-cta">Hablemos</a>
+  <button class="hamburger" id="hbg" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
-  <!-- MODAL -->
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="backdrop" data-close="1"></div>
-    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-      <div class="dialogTop">
-        <div>
-          <h3 class="dialogTitle" id="mTitle">Proyecto</h3>
-          <p class="dialogSub" id="mSub">Detalles del proyecto</p>
-        </div>
-        <button class="closeBtn" id="mClose" aria-label="Cerrar">Cerrar ✕</button>
-      </div>
-
-      <div class="dialogMedia">
-        <img id="mImg" src="" alt="Vista del proyecto" loading="lazy" decoding="async" />
-      </div>
-
-      <div class="dialogBody">
-        <div>
-          <ul class="bullets" id="mBullets"></ul>
-        </div>
-        <div class="side">
-          <div class="sideTitle">Tags</div>
-          <div class="pillRow" id="mTags"></div>
-
-          <div class="sideTitle" style="margin-top:14px">Acciones</div>
-          <div class="actions" id="mActions"></div>
-        </div>
+<!-- ===== HERO ===== -->
+<section id="hero" aria-label="Inicio">
+  <div class="hero-grid-overlay" aria-hidden="true"></div>
+  <div class="hero-spotlight" id="heroSpotlight" aria-hidden="true"></div>
+  <div class="hero-watermark" aria-hidden="true"><img src="images/logo3.png" alt=""></div>
+  <div class="hero-content">
+    <div class="hero-tag" aria-label="Servicios">
+      Diseño &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Web &nbsp;·&nbsp; Redes
+    </div>
+    <h1 class="hero-title" aria-label="No vendemos diseños, creamos marcas que venden por ti">
+      <span class="ht-1">No vendemos</span>
+      <span class="ht-2" id="scrambleTarget">creamos marcas</span>
+      <span class="ht-1">que venden.</span>
+      <span class="ht-3">Branding · Diseño · Web · Redes</span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-desc">
+        Identidades visuales y páginas web que convierten visitantes en clientes. Hacemos crecer marcas reales en la era digital.
+      </p>
+      <div class="hero-ctas">
+        <a href="#trabajos" class="btn-primary btn-mag">Ver trabajos →</a>
+        <a href="#contact" class="btn-ghost btn-mag">Cotizar</a>
       </div>
     </div>
   </div>
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-label">Scroll</span>
+  </div>
+</section>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+<!-- ===== CLIENT LOGO MARQUEE ===== -->
+<div class="marquee-wrap" aria-label="Marcas con las que hemos trabajado">
+  <div class="marquee-track" aria-hidden="true">
+    <!-- set 1 -->
+    <img class="marq-logo" src="images/logo-piacere.png" alt="Piacere Restaurant">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/logo-tuorly.png" alt="Tuorly Music">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/logo-vamoalflow.png" alt="Vamos al Flow">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/logo-cana.png" alt="CanaStudios">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/logo-montana.png" alt="Montana Viral">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/logo-reyes-garage.png" alt="Reyes Garage Doors">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/turemok.png" alt="Turemok Design">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/oca-plagas.png" alt="OCA Control de Plagas">
+    <div class="marq-sep"></div>
+    <!-- set 2 duplicate -->
+    <img class="marq-logo" src="images/logo-piacere.png" alt="Piacere Restaurant">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/logo-tuorly.png" alt="Tuorly Music">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/logo-vamoalflow.png" alt="Vamos al Flow">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/logo-cana.png" alt="CanaStudios">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/logo-montana.png" alt="Montana Viral">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/logo-reyes-garage.png" alt="Reyes Garage Doors">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/turemok.png" alt="Turemok Design">
+    <div class="marq-sep"></div>
+    <img class="marq-logo" src="images/oca-plagas.png" alt="OCA Control de Plagas">
+    <div class="marq-sep"></div>
+  </div>
+</div>
 
-    // Reveal animation
-    const items = document.querySelectorAll(".reveal");
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add("in");
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    items.forEach(el => io.observe(el));
+<!-- ===== PORTFOLIO (HORIZONTAL DRAG) ===== -->
+<section class="portfolio-section sec-full" id="trabajos" aria-labelledby="portfolio-heading">
+  <div class="portfolio-head">
+    <div>
+      <div class="sec-tag reveal">Portafolio</div>
+      <h2 id="portfolio-heading" class="sec-title">
+        <span class="line-inner">Nuestro</span>
+        <span class="line-inner">Trabajo</span>
+      </h2>
+    </div>
+    <div class="portfolio-hint reveal r2" aria-label="Arrastra para ver más">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      Arrastra para explorar
+    </div>
+  </div>
+  <div class="portfolio-track" id="portfolioTrack" role="list">
 
-    // Modal logic
-    const modal = document.getElementById("modal");
-    const mTitle = document.getElementById("mTitle");
-    const mSub = document.getElementById("mSub");
-    const mImg = document.getElementById("mImg");
-    const mBullets = document.getElementById("mBullets");
-    const mTags = document.getElementById("mTags");
-    const mActions = document.getElementById("mActions");
-    const mClose = document.getElementById("mClose");
-    let lastFocused = null;
+    <article class="p-card reveal" role="listitem"
+      data-title="CanaStudios — Diseño Web"
+      data-sub="UI/UX responsive y optimizado para conversión"
+      data-img="images/proyecto1.jpg"
+      data-tags="Web,UI/UX,Responsive,Branding"
+      data-points="Diseño moderno y limpio|Optimizada para móvil (Responsive)|Enfoque en conversión (CTA claros)|Estructura rápida y elegante"
+      data-link="https://www.canastudiosrd.net/"
+      data-linktext="Ver web">
+      <div class="p-card-img">
+        <img src="images/proyecto1.jpg" alt="Diseño web CanaStudios" loading="lazy">
+        <div class="p-card-overlay"></div>
+      </div>
+      <div class="p-card-body">
+        <div>
+          <div class="p-card-name">CanaStudios</div>
+          <div class="p-card-type">Web · UI/UX</div>
+        </div>
+        <span class="p-card-chip">WEB</span>
+      </div>
+    </article>
 
-    function openModal(data){
-      lastFocused = document.activeElement;
+    <article class="p-card reveal r1" role="listitem"
+      data-title="Vamos Al Flow — Social Networks"
+      data-sub="Gestión de contenido y diseño visual"
+      data-img="images/Proyecto2.jpg"
+      data-tags="Social,Contenido,Branding"
+      data-points="Diseño de línea gráfica consistente|Optimización visual del feed|Piezas para anuncios y stories|Contenido que convierte"
+      data-link="https://instagram.com/reyesgraphic"
+      data-linktext="Ver Instagram">
+      <div class="p-card-img">
+        <img src="images/Proyecto2.jpg" alt="Redes sociales Vamos Al Flow" loading="lazy">
+        <div class="p-card-overlay"></div>
+      </div>
+      <div class="p-card-body">
+        <div>
+          <div class="p-card-name">Vamos Al Flow</div>
+          <div class="p-card-type">Redes Sociales</div>
+        </div>
+        <span class="p-card-chip">SOCIAL</span>
+      </div>
+    </article>
 
-      mTitle.textContent = data.title || "Proyecto";
-      mSub.textContent = data.sub || "";
-      mImg.src = data.img || "";
-      mImg.alt = data.title || "Vista del proyecto";
+    <article class="p-card reveal r2" role="listitem"
+      data-title="Montana Viral — Identidad de Marca"
+      data-sub="Logo y línea gráfica completa"
+      data-img="images/proyecto3.jpg"
+      data-tags="Logo,Branding,Identidad"
+      data-points="Diseño limpio y llamativo|Versatilidad en formatos|Consistencia visual|Guía de marca entregada"
+      data-link=""
+      data-linktext="">
+      <div class="p-card-img">
+        <img src="images/proyecto3.jpg" alt="Logo Montana Viral" loading="lazy">
+        <div class="p-card-overlay"></div>
+      </div>
+      <div class="p-card-body">
+        <div>
+          <div class="p-card-name">Montana Viral</div>
+          <div class="p-card-type">Logo · Branding</div>
+        </div>
+        <span class="p-card-chip">LOGO</span>
+      </div>
+    </article>
 
-      mBullets.innerHTML = "";
-      (data.points || []).forEach(p => {
-        const li = document.createElement("li");
-        li.textContent = p;
-        mBullets.appendChild(li);
-      });
+    <article class="p-card reveal r3" role="listitem"
+      data-title="CanaStudios — Logo & Identidad"
+      data-sub="Diseño de logo y branding completo"
+      data-img="images/proyecto4.jpg"
+      data-tags="Logo,Branding,Estudio"
+      data-points="Logo profesional y memorable|Paleta de colores definida|Tipografía seleccionada|Archivos en todos los formatos"
+      data-link=""
+      data-linktext="">
+      <div class="p-card-img">
+        <img src="images/proyecto4.jpg" alt="Logo CanaStudios" loading="lazy">
+        <div class="p-card-overlay"></div>
+      </div>
+      <div class="p-card-body">
+        <div>
+          <div class="p-card-name">CanaStudios</div>
+          <div class="p-card-type">Logo · Identidad</div>
+        </div>
+        <span class="p-card-chip">LOGO</span>
+      </div>
+    </article>
 
-      mTags.innerHTML = "";
-      (data.tags || []).forEach(t => {
-        const span = document.createElement("span");
-        span.className = "pill";
-        span.textContent = t;
-        mTags.appendChild(span);
-      });
+    <article class="p-card reveal r1" role="listitem"
+      data-title="Piacere Restaurant — Branding"
+      data-sub="Identidad visual y gestión de redes"
+      data-img="images/piacere.jpg"
+      data-tags="Branding,Redes,Restaurante,Premium"
+      data-points="Identidad visual gastronómica|Menú y piezas gráficas|Contenido para Instagram|Estética premium"
+      data-link="https://www.instagram.com/piacererestaurant_/"
+      data-linktext="Ver Instagram">
+      <div class="p-card-img">
+        <img src="images/piacere.jpg" alt="Branding Piacere Restaurant" loading="lazy">
+        <div class="p-card-overlay"></div>
+      </div>
+      <div class="p-card-body">
+        <div>
+          <div class="p-card-name">Piacere Restaurant</div>
+          <div class="p-card-type">Branding · Redes</div>
+        </div>
+        <span class="p-card-chip">BRANDING</span>
+      </div>
+    </article>
 
-      mActions.innerHTML = "";
+    <article class="p-card reveal r1" role="listitem"
+      data-title="Turemok Design — Logo & Branding"
+      data-sub="Diseño de logo e identidad visual creativa"
+      data-img="images/proyecto5.jpg"
+      data-tags="Logo,Branding,Diseño,Creativo"
+      data-points="Logo profesional y memorable|Paleta de colores definida|Tipografía y guía de marca|Archivos en todos los formatos"
+      data-link=""
+      data-linktext="">
+      <div class="p-card-img">
+        <img src="images/proyecto5.jpg" alt="Logo Turemok Design" loading="lazy">
+        <div class="p-card-overlay"></div>
+      </div>
+      <div class="p-card-body">
+        <div>
+          <div class="p-card-name">Turemok Design</div>
+          <div class="p-card-type">Logo · Branding</div>
+        </div>
+        <span class="p-card-chip">LOGO</span>
+      </div>
+    </article>
 
-      const wa = document.createElement("a");
-      wa.className = "btn primary";
-      wa.href = "https://wa.me/18095551234";
-      wa.target = "_blank";
-      wa.rel = "noopener";
-      wa.textContent = "Cotizar por WhatsApp";
-      mActions.appendChild(wa);
+    <article class="p-card reveal r2" role="listitem"
+      data-title="Tuorly Music — Branding Musical"
+      data-sub="Identidad visual para artista musical"
+      data-img="images/tuorly.jpg"
+      data-tags="Branding,Música,Artista"
+      data-points="Identidad visual del artista|Portadas y flyers de lanzamiento|Contenido para redes|Posicionamiento de marca"
+      data-link="https://www.instagram.com/tuorlymusic/"
+      data-linktext="Ver Instagram">
+      <div class="p-card-img">
+        <img src="images/tuorly.jpg" alt="Branding Tuorly Music" loading="lazy">
+        <div class="p-card-overlay"></div>
+      </div>
+      <div class="p-card-body">
+        <div>
+          <div class="p-card-name">Tuorly Music</div>
+          <div class="p-card-type">Branding · Música</div>
+        </div>
+        <span class="p-card-chip">BRANDING</span>
+      </div>
+    </article>
 
-      if (data.link){
-        const a = document.createElement("a");
-        a.className = "btn ghost";
-        a.href = data.link;
-        a.target = "_blank";
-        a.rel = "noopener";
-        a.textContent = data.linktext || "Ver";
-        mActions.appendChild(a);
-      }
+    <article class="p-card reveal r3" role="listitem"
+      data-title="Reyes Garage Doors LLC — Web"
+      data-sub="Diseño y desarrollo web empresarial"
+      data-img="images/reyes-garage.jpg"
+      data-tags="Web,Empresa,UI/UX,USA"
+      data-points="Diseño web profesional|Optimizada para móvil|CTA orientados a conversión|Formulario de contacto integrado"
+      data-link="https://reyesgaragedoorsllc.com/"
+      data-linktext="Ver web">
+      <div class="p-card-img">
+        <img src="images/reyes-garage.jpg" alt="Web Reyes Garage Doors" loading="lazy">
+        <div class="p-card-overlay"></div>
+      </div>
+      <div class="p-card-body">
+        <div>
+          <div class="p-card-name">Reyes Garage Doors</div>
+          <div class="p-card-type">Web · Empresa · USA</div>
+        </div>
+        <span class="p-card-chip">WEB</span>
+      </div>
+    </article>
 
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-      mClose.focus();
-    }
+    <article class="p-card reveal r4" role="listitem"
+      data-title="OCA Control de Plagas — Web"
+      data-sub="Diseño y desarrollo web para empresa local"
+      data-img="images/oca-plagas.png"
+      data-tags="Web,Local,UI/UX,SEO"
+      data-points="Sitio web moderno y profesional|Responsive en móvil y desktop|Servicios destacados con CTA|Posicionamiento local SEO"
+      data-link="https://ocacontroldeplagas.com/"
+      data-linktext="Ver web">
+      <div class="p-card-img">
+        <img src="images/oca-plagas.png" alt="Web OCA Control de Plagas" loading="lazy">
+        <div class="p-card-overlay"></div>
+      </div>
+      <div class="p-card-body">
+        <div>
+          <div class="p-card-name">OCA Control de Plagas</div>
+          <div class="p-card-type">Web · Local</div>
+        </div>
+        <span class="p-card-chip">WEB</span>
+      </div>
+    </article>
 
-    function closeModal(){
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-      if (lastFocused) lastFocused.focus();
-    }
+  </div>
+</section>
 
-    document.querySelectorAll(".workCardBtn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const points = (btn.dataset.points || "").split("|").filter(Boolean);
-        const tags = (btn.dataset.tags || "").split(",").map(s => s.trim()).filter(Boolean);
+<!-- ===== SERVICES (FLIP CARDS) ===== -->
+<section id="services" class="sec" aria-labelledby="services-heading">
+  <div class="sec-tag reveal">Servicios</div>
+  <h2 id="services-heading" class="sec-title">
+    <span class="line-inner">Lo Que</span>
+    <span class="line-inner">Hacemos</span>
+  </h2>
+  <p class="sec-sub reveal r1">Pasa el cursor sobre cada tarjeta para ver los detalles.</p>
+  <div class="svc-grid">
 
-        openModal({
-          title: btn.dataset.title,
-          sub: btn.dataset.sub,
-          img: btn.dataset.img,
-          points,
-          tags,
-          link: btn.dataset.link,
-          linktext: btn.dataset.linktext
-        });
-      });
-    });
+    <div class="flip-card reveal">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <span class="flip-front-icon" aria-hidden="true">✦</span>
+          <div>
+            <div class="flip-front-title">Branding</div>
+            <div class="flip-front-sub">Identidad Visual</div>
+          </div>
+        </div>
+        <div class="flip-back" aria-label="Branding - ver detalles">
+          <div class="flip-back-title">Branding</div>
+          <div class="flip-back-desc">Identidad visual completa: logo, paleta, tipografía, guía de marca y piezas esenciales. Tu marca, inconfundible.</div>
+          <a href="/branding" class="flip-back-cta">Ver servicio →</a>
+        </div>
+      </div>
+    </div>
 
-    mClose.addEventListener("click", closeModal);
-    modal.addEventListener("click", (e) => {
-      if (e.target && e.target.dataset && e.target.dataset.close) closeModal();
-    });
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
-    });
-  </script>
+    <div class="flip-card reveal r1">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <span class="flip-front-icon" aria-hidden="true">⬡</span>
+          <div>
+            <div class="flip-front-title">Diseño Web</div>
+            <div class="flip-front-sub">Landing & Portafolio</div>
+          </div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-title">Diseño Web</div>
+          <div class="flip-back-desc">Páginas web rápidas, modernas y responsive. Diseñadas para convertir visitas en clientes reales. SEO incluido.</div>
+          <a href="/diseno-web" class="flip-back-cta">Ver servicio →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card reveal r2">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <span class="flip-front-icon" aria-hidden="true">◈</span>
+          <div>
+            <div class="flip-front-title">Redes</div>
+            <div class="flip-front-sub">Social Media Design</div>
+          </div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-title">Redes Sociales</div>
+          <div class="flip-back-desc">Posts, carruseles, stories, anuncios y plantillas. Diseño consistente que construye comunidad y autoridad de marca.</div>
+          <a href="/redes-sociales" class="flip-back-cta">Ver servicio →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card reveal r3">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <span class="flip-front-icon" aria-hidden="true">◎</span>
+          <div>
+            <div class="flip-front-title">Marketing</div>
+            <div class="flip-front-sub">Estrategia Digital</div>
+          </div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-title">Marketing Digital</div>
+          <div class="flip-back-desc">Estrategia de contenido, ads y posicionamiento para crecer tu audiencia y multiplicar tus ventas online.</div>
+          <a href="/marketing-digital" class="flip-back-cta">Ver servicio →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section id="process" class="sec" aria-labelledby="process-heading" style="background:var(--bg-2);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="sec-tag reveal">Proceso</div>
+    <h2 id="process-heading" class="sec-title">
+      <span class="line-inner">Así</span>
+      <span class="line-inner">Trabajamos</span>
+    </h2>
+    <div class="process-list">
+      <div class="proc-item reveal">
+        <div class="proc-num">01 — Briefing</div>
+        <div class="proc-title">Escuchamos</div>
+        <p class="proc-desc">Entendemos tu marca, tu mercado y tus objetivos. Cuanto más sabemos, mejor el resultado.</p>
+      </div>
+      <div class="proc-item reveal r1">
+        <div class="proc-num">02 — Estrategia</div>
+        <div class="proc-title">Planificamos</div>
+        <p class="proc-desc">Definimos el concepto, la dirección visual y los entregables. Sin sorpresas en el camino.</p>
+      </div>
+      <div class="proc-item reveal r2">
+        <div class="proc-num">03 — Diseño</div>
+        <div class="proc-title">Creamos</div>
+        <p class="proc-desc">Producimos las piezas con atención al detalle. Iteramos hasta que el resultado sea exactamente lo que necesitas.</p>
+      </div>
+      <div class="proc-item reveal r3">
+        <div class="proc-num">04 — Entrega</div>
+        <div class="proc-title">Lanzamos</div>
+        <p class="proc-desc">Entregamos todos los archivos listos para usar. Soporte post-lanzamiento incluido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENTS ===== -->
+<section id="clients-sec" class="sec" aria-labelledby="clients-heading">
+  <div class="sec-tag reveal">Clientes</div>
+  <h2 id="clients-heading" class="sec-title">
+    <span class="line-inner">Marcas que</span>
+    <span class="line-inner">Confían</span>
+  </h2>
+  <div class="clients-grid">
+
+    <a class="client-card reveal" href="https://www.instagram.com/piacererestaurant_/" target="_blank" rel="noopener">
+      <div class="c-logo-wrap"><img src="images/logo-piacere.png" alt="Piacere Restaurant"></div>
+      <span class="c-name">Piacere Restaurant</span>
+      <span class="c-type">Restaurante · Branding</span>
+    </a>
+
+    <a class="client-card reveal r1" href="https://www.instagram.com/tuorlymusic/" target="_blank" rel="noopener">
+      <div class="c-logo-wrap"><img class="cover" src="images/logo-tuorly.png" alt="Tuorly Music"></div>
+      <span class="c-name">Tuorly Music</span>
+      <span class="c-type">Música · Redes</span>
+    </a>
+
+    <a class="client-card reveal r2" href="https://www.instagram.com/vamoalflownoticias/" target="_blank" rel="noopener">
+      <div class="c-logo-wrap"><img src="images/logo-vamoalflow.png" alt="Vamos al Flow"></div>
+      <span class="c-name">Vamos al Flow Noticias</span>
+      <span class="c-type">Media · Redes</span>
+    </a>
+
+    <a class="client-card reveal r3" href="https://www.instagram.com/canastudiosrd/" target="_blank" rel="noopener">
+      <div class="c-logo-wrap"><img src="images/logo-cana.png" alt="Cana Studios"></div>
+      <span class="c-name">CanaStudios RD</span>
+      <span class="c-type">Estudio · Web · Logo</span>
+    </a>
+
+    <a class="client-card reveal r1" href="https://www.instagram.com/montanaviralmedia/" target="_blank" rel="noopener">
+      <div class="c-logo-wrap"><img src="images/logo-montana.png" alt="Montana Viral"></div>
+      <span class="c-name">Montana Viral Media</span>
+      <span class="c-type">Media · Logo</span>
+    </a>
+
+    <a class="client-card reveal r2" href="https://reyesgaragedoorsllc.com/" target="_blank" rel="noopener">
+      <div class="c-logo-wrap"><img src="images/logo-reyes-garage.png" alt="Reyes Garage Doors"></div>
+      <span class="c-name">Reyes Garage Doors LLC</span>
+      <span class="c-type">Empresa · Web · USA</span>
+    </a>
+
+    <a class="client-card reveal r3" href="https://ocacontroldeplagas.com/" target="_blank" rel="noopener">
+      <div class="c-logo-wrap"><img class="cover" src="images/oca-plagas.png" alt="OCA Control de Plagas"></div>
+      <span class="c-name">OCA Control de Plagas</span>
+      <span class="c-type">Empresa · Web</span>
+    </a>
+
+    <div class="client-card reveal r4">
+      <div class="c-logo-wrap"><img src="images/turemok.png" alt="Turemok Design"></div>
+      <span class="c-name">Turemok Design</span>
+      <span class="c-type">Logo · Identidad Visual</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== GOOGLE REVIEWS ===== -->
+<section id="reviews" class="sec" aria-labelledby="reviews-heading" style="border-top:1px solid var(--border);">
+  <div class="sec-tag reveal">Reseñas</div>
+  <h2 id="reviews-heading" class="sec-title">
+    <span class="line-inner">Lo que dicen</span>
+    <span class="line-inner">nuestros clientes</span>
+  </h2>
+  <div class="reviews-grid reveal r2">
+    <div class="reviews-summary">
+      <span class="reviews-score">5.0</span>
+      <span class="reviews-stars-big">★★★★★</span>
+      <span class="reviews-total">6 reseñas en Google</span>
+      <a href="https://www.google.com/search?q=reyes+graphic" target="_blank" rel="noopener" class="reviews-cta">Dejar reseña →</a>
+    </div>
+    <div class="reviews-cards">
+      <article class="review-card">
+        <div class="review-header">
+          <div class="review-avatar-fallback">C</div>
+          <div class="review-meta">
+            <span class="review-name">Carlos Reyes</span>
+            <span class="review-time">Hace un mes</span>
+          </div>
+          <span class="review-stars" aria-label="5 estrellas">★★★★★</span>
+        </div>
+        <p class="review-text">Reyes Graphic brindó una experiencia excepcional de principio a fin. Su creatividad, atención al detalle y profesionalismo son extraordinarios. Entienden a la perfección cómo construir una marca que no solo luzca increíble, sino que también genere conversiones.</p>
+      </article>
+      <article class="review-card">
+        <div class="review-header">
+          <div class="review-avatar-fallback">R</div>
+          <div class="review-meta">
+            <span class="review-name">Romy Ram</span>
+            <span class="review-time">Hace un mes</span>
+          </div>
+          <span class="review-stars" aria-label="5 estrellas">★★★★★</span>
+        </div>
+        <p class="review-text">¡¡Pararse!!</p>
+      </article>
+      <article class="review-card">
+        <div class="review-header">
+          <div class="review-avatar-fallback">T</div>
+          <div class="review-meta">
+            <span class="review-name">Tuorly</span>
+            <span class="review-time">Hace un mes</span>
+          </div>
+          <span class="review-stars" aria-label="5 estrellas">★★★★★</span>
+        </div>
+        <p class="review-text">El mejor.</p>
+      </article>
+      <article class="review-card">
+        <div class="review-header">
+          <div class="review-avatar-fallback">A</div>
+          <div class="review-meta">
+            <span class="review-name">Antoinette Rios</span>
+            <span class="review-time">Hace un mes</span>
+          </div>
+          <span class="review-stars" aria-label="5 estrellas">★★★★★</span>
+        </div>
+        <p class="review-text">Excelente trabajo!!</p>
+      </article>
+      <article class="review-card">
+        <div class="review-header">
+          <div class="review-avatar-fallback">Y</div>
+          <div class="review-meta">
+            <span class="review-name">Yadhira Duran</span>
+            <span class="review-time">Hace un mes</span>
+          </div>
+          <span class="review-stars" aria-label="5 estrellas">★★★★★</span>
+        </div>
+        <p class="review-text">Me encanta su desempeño y calidad!!</p>
+      </article>
+      <article class="review-card">
+        <div class="review-header">
+          <div class="review-avatar-fallback">C</div>
+          <div class="review-meta">
+            <span class="review-name">Cana Studios</span>
+            <span class="review-time">Hace un mes</span>
+          </div>
+          <span class="review-stars" aria-label="5 estrellas">★★★★★</span>
+        </div>
+        <p class="review-text">Sin fallos y la mejor visualización.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="sec" aria-labelledby="contact-heading" style="border-top:1px solid var(--border);">
+  <div class="contact-wrap">
+    <div>
+      <div class="sec-tag reveal">Contacto</div>
+      <h2 id="contact-heading" class="contact-big-title">
+        <span class="line-inner">¿Listo</span>
+        <span class="line-inner">Para</span>
+        <span class="line-inner">Crecer?</span>
+      </h2>
+      <p class="sec-sub reveal r2" style="margin-bottom:2rem;">
+        Cuéntanos tu proyecto. Respondemos en menos de 24 horas y armamos una propuesta sin costo.
+      </p>
+      <div class="contact-links reveal r3">
+        <a class="c-link" href="mailto:info@reyesgraphic.net">
+          <div class="c-link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div>
+            <span class="c-link-label">Email</span>
+            <span class="c-link-val">info@reyesgraphic.net</span>
+          </div>
+        </a>
+        <a class="c-link" href="https://instagram.com/reyesgraphic" target="_blank" rel="noopener">
+          <div class="c-link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <div>
+            <span class="c-link-label">Instagram</span>
+            <span class="c-link-val">@reyesgraphic</span>
+          </div>
+        </a>
+        <a class="c-link" href="https://www.facebook.com/reyesgraphicrd" target="_blank" rel="noopener">
+          <div class="c-link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </div>
+          <div>
+            <span class="c-link-label">Facebook</span>
+            <span class="c-link-val">ReyesGraphicRD</span>
+          </div>
+        </a>
+        <a class="c-link" href="https://www.tiktok.com/@reyesgraphic" target="_blank" rel="noopener">
+          <div class="c-link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.75a8.27 8.27 0 0 0 4.84 1.55V6.85a4.85 4.85 0 0 1-1.07-.16z"/></svg>
+          </div>
+          <div>
+            <span class="c-link-label">TikTok</span>
+            <span class="c-link-val">@reyesgraphic</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="contact-right reveal r2">
+      <form id="contactForm" novalidate class="contact-form" aria-label="Formulario de cotización">
+        <h3 class="cf-title">Cuéntanos tu proyecto</h3>
+        <p class="cf-sub">Gratis · Sin compromiso · Respuesta en 24h</p>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="fname">Nombre *</label>
+            <input type="text" id="fname" name="fname" placeholder="Tu nombre" required autocomplete="given-name">
+          </div>
+          <div class="f-group">
+            <label for="fservice">Servicio</label>
+            <select id="fservice" name="fservice">
+              <option value="">¿Qué necesitas?</option>
+              <option>🎨 Branding / Logo</option>
+              <option>🌐 Diseño Web</option>
+              <option>📱 Redes Sociales</option>
+              <option>📣 Marketing Digital</option>
+              <option>💼 Paquete Completo</option>
+            </select>
+          </div>
+        </div>
+        <div class="f-group">
+          <label for="femail">Email o WhatsApp *</label>
+          <input type="text" id="femail" name="femail" placeholder="email@ejemplo.com o 809-000-0000" required autocomplete="email">
+        </div>
+        <div class="f-group">
+          <label for="fmsg">Cuéntanos tu proyecto</label>
+          <textarea id="fmsg" name="fmsg" rows="3" placeholder="¿Qué tipo de proyecto tienes? ¿Ya tienes alguna idea visual?"></textarea>
+        </div>
+        <button type="button" class="btn-submit" id="submitBtn">
+          Enviar solicitud →
+        </button>
+        <a href="https://wa.me/18496536397?text=Hola%20ReyesGraphic%2C%20quiero%20cotizar%20un%20proyecto"
+           target="_blank" rel="noopener" class="c-wa-big" style="margin-top:.5rem;">
+          <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+            <path d="M16.003 3C9.383 3 4 8.383 4 15.003c0 2.646.863 5.096 2.33 7.084L5 29l7.1-1.864a11.94 11.94 0 0 0 3.903.65C22.617 27.786 28 22.403 28 15.003 28 8.383 22.617 3 16.003 3zm5.357 14.43c-.293-.147-1.736-.857-2.006-.956-.27-.098-.467-.147-.664.148-.196.293-.762.956-.934 1.152-.172.197-.344.222-.637.074-.293-.147-1.238-.456-2.357-1.456-.87-.777-1.457-1.735-1.63-2.028-.172-.293-.018-.45.13-.597.132-.132.293-.344.44-.516.148-.172.197-.293.295-.49.098-.196.05-.37-.025-.517-.074-.147-.664-1.603-.91-2.195-.24-.576-.483-.498-.664-.507l-.566-.01c-.196 0-.517.074-.787.37-.27.293-1.033 1.01-1.033 2.468 0 1.457 1.058 2.865 1.205 3.063.148.196 2.083 3.18 5.047 4.458.705.304 1.255.486 1.684.622.707.225 1.35.193 1.857.117.566-.085 1.736-.71 1.982-1.395.246-.687.246-1.277.172-1.395-.074-.117-.27-.197-.566-.344z"/>
+          </svg>
+          O escribir por WhatsApp
+        </a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer role="contentinfo">
+  <div class="footer-wrap">
+    <img class="footer-logo" src="images/logo3.png" alt="ReyesGraphic" loading="lazy">
+    <p class="footer-copy">© ReyesGraphic — Hecho con pasión.</p>
+    <div class="footer-soc" aria-label="Redes sociales">
+      <a href="https://instagram.com/reyesgraphic" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/reyesgraphicrd" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@reyesgraphic" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.75a8.27 8.27 0 0 0 4.84 1.55V6.85a4.85 4.85 0 0 1-1.07-.16z"/></svg>
+      </a>
+      <a href="https://wa.me/18496536397" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16.003 3C9.383 3 4 8.383 4 15.003c0 2.646.863 5.096 2.33 7.084L5 29l7.1-1.864a11.94 11.94 0 0 0 3.903.65C22.617 27.786 28 22.403 28 15.003 28 8.383 22.617 3 16.003 3zm5.357 14.43c-.293-.147-1.736-.857-2.006-.956-.27-.098-.467-.147-.664.148-.196.293-.762.956-.934 1.152-.172.197-.344.222-.637.074-.293-.147-1.238-.456-2.357-1.456-.87-.777-1.457-1.735-1.63-2.028-.172-.293-.018-.45.13-.597.132-.132.293-.344.44-.516.148-.172.197-.293.295-.49.098-.196.05-.37-.025-.517-.074-.147-.664-1.603-.91-2.195-.24-.576-.483-.498-.664-.507l-.566-.01c-.196 0-.517.074-.787.37-.27.293-1.033 1.01-1.033 2.468 0 1.457 1.058 2.865 1.205 3.063.148.196 2.083 3.18 5.047 4.458.705.304 1.255.486 1.684.622.707.225 1.35.193 1.857.117.566-.085 1.736-.71 1.982-1.395.246-.687.246-1.277.172-1.395-.074-.117-.27-.197-.566-.344z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" aria-label="Volver al inicio">↑</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+<!-- MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="modal-top">
+      <div>
+        <h3 class="modal-title" id="mTitle">Proyecto</h3>
+        <p class="modal-sub" id="mSub">Detalles del proyecto</p>
+      </div>
+      <button class="modal-close" id="mClose" aria-label="Cerrar modal">Cerrar ✕</button>
+    </div>
+    <div class="modal-img">
+      <img id="mImg" src="" alt="Vista del proyecto" loading="lazy">
+    </div>
+    <div class="modal-body">
+      <ul class="modal-bullets" id="mBullets"></ul>
+      <div class="modal-side">
+        <div class="modal-side-title">Tags</div>
+        <div class="modal-pills" id="mTags"></div>
+        <div class="modal-side-title">Acciones</div>
+        <div class="modal-actions" id="mActions"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
